@@ -64,7 +64,7 @@ $this->widget ( 'zii.widgets.CMenu', array (
 								array (
 										'label' => 'exploit',
 										'url' => array (
-												'/UserCenter/login/login' 
+												'/Hack/exploit/main' 
 										) 
 								) 
 						) 

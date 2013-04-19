@@ -38,7 +38,7 @@ class title extends CWidget {
 		echo <<< EOT
 	<div class="page-header">
 		<div class="page-header-content">
-			<h1>Database<small>tool</small></h1>
+			<h1>$h1<small>$small</small></h1>
 			<a href="$ref" class="back-button big page-back"></a>
 		</div>
 	</div>
