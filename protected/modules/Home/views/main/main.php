@@ -1,3 +1,4 @@
+<div class="page" id="page-index">
 <?php
 /* @var $this MainController */
 
@@ -12,7 +13,6 @@ $this->breadcrumbs = array (
 	<tt><?php echo __FILE__; ?></tt>
 	.
 </p>
-
 <?php
 $this->widget ( 'ext.popup.popup' );
 
@@ -31,7 +31,6 @@ $form = $this->beginWidget ( 'CActiveForm', array (
 ) );
 
 ?>
-<button>this is test</button>
 <?php
 /*
  * $model = new ImgUploadForm (); $this->widget ( 'widget.system.uploadForm',
@@ -66,3 +65,5 @@ $this->widget ( 'widget.system.uploadForm', array (
 				});
 	})*/
 </script>
+
+</div>

@@ -39,9 +39,10 @@ $components = require 'components.php';
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Top\'s Vengeance ',
+	'name'=>'Top\'s Codebase ',
     'timeZone'=>'Asia/Shanghai', //设置时区为上海
     'language'=>'zh_cn',
+	'layout'=>'metro',
 
     'defaultController'=>'Home/main',
 

@@ -63,7 +63,7 @@ class autoRegisterFile extends CWidget {
 		);
 		
 		foreach ( $ary_pos as $key => $val ) {
-			if (isset ( $_js [$key] )) {
+			if (isset ( $this->js [$key] )) {
 				$this->_registerScript ( $this->js [$key], $val );
 				unset ( $this->js [$key] );
 			}

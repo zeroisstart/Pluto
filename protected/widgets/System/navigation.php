@@ -2,6 +2,13 @@
 class navigation extends CWidget {
 	
 	/**
+	 * metro UI 的发布路径
+	 *
+	 * @var string
+	 */
+	public $metroAssets = null;
+	
+	/**
 	 * (non-PHPdoc)
 	 *
 	 * @see CWidget::init()
@@ -14,5 +21,8 @@ class navigation extends CWidget {
 	 * @see CWidget::run()
 	 */
 	public function run() {
+		$this->render ( 'views._widgets.system.navigation', array (
+				'assets' => $this->metroAssets 
+		) );
 	}
 }

@@ -3773,6 +3773,7 @@ License:	CC BY-SA 3.0 -- http://creativecommons.org/licenses/by-sa/3.0/
   font-size: 9pt;
 }
 .metrouicss .pagination {
+  float:right;
   width: auto;
   margin-bottom: 10px;
 }
