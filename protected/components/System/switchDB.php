@@ -37,14 +37,24 @@ class switchDB extends CComponent {
 	}
 	
 	/**
-	 * 
 	 */
-	public function resetDB(){
-		$db = Yii::app() -> db ;
-		foreach($this -> defaultConfig as $key => $val){
-			$db -> $key = $val;
+	public function resetDB() {
+		$db = Yii::app ()->db;
+		foreach ( $this->defaultConfig as $key => $val ) {
+			$db->$key = $val;
 		}
-		$db -> setActive(false);
+		$db->setActive ( false );
 		return true;
-	} 
+	}
+	
+	/**
+	 *
+	 * @param MysqlAccount $model        	
+	 */
+	public function swByModel(MysqlAccount $model) {
+		$this->defaultConfig ['connectionString'] = "mysql:host=" . $model->host . ";";
+		$this->defaultConfig ['username'] = $model->username;
+		$this->defaultConfig ['password'] = $model->password;
+		$this->swch ( $this->defaultConfig );
+	}
 }

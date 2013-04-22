@@ -9,14 +9,14 @@ return array (
 				'class' => 'components.System.Folder' 
 		),
 		'clientScript' => array (
-				//'class'=>'ext.dwz.DClientScript',
+				// 'class'=>'ext.dwz.DClientScript',
 				'class' => 'components.System.ClientScript' 
 		),
 		// uncomment the following to enable URLs in path-format
 		'urlManager' => array (
 				'urlFormat' => 'path',
 				'showScriptName' => false,
-				'rules' => require 'routes.php'
+				'rules' => require 'routes.php' 
 		),
 		// uncomment the following to use a MySQL database
 		'db' => array (
@@ -40,5 +40,8 @@ return array (
 		),
 		'switchDB' => array (
 				'class' => 'application.components.System.switchDB' 
+		),
+		'database' => array (
+				'class' => 'application.components.System.Database' 
 		) 
 );

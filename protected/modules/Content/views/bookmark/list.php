@@ -1,16 +1,14 @@
 <div class="page secondary">
-       <div class="page-header">
-            <div class="page-header-content">
-                <h1>Global<small>styles</small></h1>
-                <a href="<?php echo Yii::app() -> request -> UrlReferrer?>" class="back-button big page-back"></a>
-            </div>
-        </div>
-
-        <div class="page-region">
-            <div class="page-region-content">
-<p class="p_link">
-	<a href="<?php echo $this -> createUrl('/Tool/bookmark/add');?>" target="_blank">add</a>
-</p>
+		
+	  <?php $this -> widget('widget.Helper.title',array('h1'=>'Bookmark','small'=>'list'))?>
+<div class="page-region">
+    	<div class="page-region-content">
+    	
+    	<button class="standart default">Add</button>
+		<p class="p_link" style="display:none;">
+			
+			<a href="<?php echo $this -> createUrl('/Tool/bookmark/add');?>" target="_blank" style="display:none;">add</a>
+		</p>
 
 <?php // $this -> renderPartial('_form',array('model'=>$model,'method'=>'GET'));?>
 
@@ -31,7 +29,6 @@ $this->widget ( 'components.widgets.MetroGridView', array (
 						'name' => 'Time',
 						'value' => 'date("Y-m-d",$data->Time)' 
 				),
-				//'Read',
 				array (
 						'header'=>'操作',
 						'template'=>'{update} {delete}',
