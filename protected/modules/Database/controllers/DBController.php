@@ -31,8 +31,8 @@ class DBController extends Controller {
 				$database = Yii::app ()->database->getDatabases ();
 			}
 		}
-		if($database){
-			echo CHtml::dropDownList('database', reset($database), $database);
+		if ($database) {
+			echo CHtml::dropDownList ( 'database', reset ( $database ), $database );
 		}
 	}
-}
+}  

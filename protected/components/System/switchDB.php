@@ -52,7 +52,15 @@ class switchDB extends CComponent {
 	 * @param MysqlAccount $model        	
 	 */
 	public function swByModel(MysqlAccount $model) {
+		$req = Yii::app ()->request;
+		$database = $req->getParam ( 'database' );
+		
 		$this->defaultConfig ['connectionString'] = "mysql:host=" . $model->host . ";";
+		
+		// 是否有数据库存在
+		if ($database)
+			$this->defaultConfig ['connectionString'] .= "dbname=" . $database;
+		
 		$this->defaultConfig ['username'] = $model->username;
 		$this->defaultConfig ['password'] = $model->password;
 		$this->swch ( $this->defaultConfig );

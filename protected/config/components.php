@@ -43,5 +43,5 @@ return array (
 		),
 		'database' => array (
 				'class' => 'application.components.System.Database' 
-		) 
+		) ,
 );
