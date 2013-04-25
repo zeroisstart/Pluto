@@ -20,7 +20,7 @@
 			table = $('#' + gridId).children('.' + settings.tableClass);
 
 		table.children('tbody').find('input.select-on-check').filter(':checked').each(function () {
-			$(this).closest('tr').addClass('selected');
+			$(this).closest('tr').addClass('yii_selected');
 		});
 
 		table.children('thead').find('th input').filter('[type="checkbox"]').each(function () {
@@ -148,10 +148,10 @@
 						$row = $(this);
 						$currentGrid = $('#' + id);
 						$checks = $('input.select-on-check', $currentGrid);
-						isRowSelected = $row.toggleClass('selected').hasClass('selected');
+						isRowSelected = $row.toggleClass('yii_selected').hasClass('yii_selected');
 
 						if (settings.selectableRows === 1) {
-							$row.siblings().removeClass('selected');
+							$row.siblings().removeClass('yii_selected');
 							$checks.prop('checked', false);
 						}
 						$('input.select-on-check', $row).prop('checked', isRowSelected);
@@ -168,11 +168,11 @@
 								$checksAll = $('input.select-on-check-all', $currentGrid),
 								$rows = $currentGrid.children('.' + settings.tableClass).children('tbody').children();
 							if (this.checked) {
-								$rows.addClass('selected');
+								$rows.addClass('yii_selected');
 								$checks.prop('checked', true);
 								$checksAll.prop('checked', true);
 							} else {
-								$rows.removeClass('selected');
+								$rows.removeClass('yii_selected');
 								$checks.prop('checked', false);
 								$checksAll.prop('checked', false);
 							}
@@ -342,7 +342,7 @@
 				keys = this.find('.keys span'),
 				selection = [];
 			this.find('.' + settings.tableClass).children('tbody').children().each(function (i) {
-				if ($(this).hasClass('selected')) {
+				if ($(this).hasClass('yii_selected')) {
 					selection.push(keys.eq(i).text());
 				}
 			});

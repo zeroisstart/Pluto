@@ -168,3 +168,8 @@ hr {
         display: none;
     }
 }
+.metrouicss pre{
+	background-color:#FFF;
+	border:0px;
+	padding:0px;
+}

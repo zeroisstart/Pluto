@@ -16,18 +16,11 @@ class TableController extends Controller {
 		$this->render ( 'delete' );
 	}
 	/**
+	 * 表名列表
 	 */
 	public function actionList() {
-		
-		// data = $dbCommand -> queryAll();
 		$dbCommand = Yii::app ()->db->createCommand ( "show tables" );
 		$tables = $dbCommand->queryAll ();
-		
-		/*
-		$ary_db = array ();
-		foreach ( $dbs as $key => $val ) {
-			$ary_db [reset ( $val )] = reset ( $val );
-		}*/
 		
 		$Model = MysqlAccount::model ();
 		$connections = $Model->getAllConnections ();
@@ -37,12 +30,33 @@ class TableController extends Controller {
 				'small' => 'list',
 				'args' => array (
 						'tables' => $tables,
-						'connections' => $connections,
-						#'dbs' => $ary_db 
+						'connections' => $connections 
 				) 
 		) );
 	}
+	/**
+	 * AJAX 获取数据库的表名
+	 */
 	public function actionAjaxTable() {
+		// 切换数据库
+		$this->_switch ();
+		$tables = Yii::app ()->database->getTables ();
+		if ($tables) {
+			$count = count ( $tables );
+			for($i = 0; $i < $count; $i ++) {
+				if ($i % 3 == 0) {
+					echo "</tr><tr>";
+				}
+				echo "<td>" . $tables [$i] . "</td>";
+			}
+		}
+	}
+	/**
+	 * 切换数据库
+	 * 
+	 * @return boolean
+	 */
+	private function _switch() {
 		$req = Yii::app ()->request;
 		$id = $req->getParam ( 'id' );
 		$database = false;
@@ -51,19 +65,16 @@ class TableController extends Controller {
 			if ($model) {
 				Yii::app ()->switchDB->swByModel ( $model );
 				// database = Yii::app ()->database->getDatabases ();
-				$tables = Yii::app ()->database->getTables ();
+				return true;
 			}
 		}
-		if ($tables) {
-			$count = count($tables);
-			for($i = 0;$i<$count;$i++){
-				if($i%3 ==0){
-					echo "</tr><tr>";
-				}
-				echo "<td>".$tables[$i]."</td>";
-			}
-			#echo CHtml::dropDownList ( 'database', reset ( $database ), $database );
-		}
+		return false;
+	}
+	/**
+	 * 向表里面添加数据
+	 */
+	public function actionInsert() {
+		$req = Yii::app ()->request;
 	}
 	public function actionMain() {
 		$this->render ( 'main' );

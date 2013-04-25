@@ -1,20 +1,14 @@
 <div class="page secondary">
-		
 	  <?php $this -> widget('widget.Helper.title',array('h1'=>'Bookmark','small'=>'list'))?>
 <div class="page-region">
-    	<div class="page-region-content">
-    	
-    	<button class="standart default">Add</button>
-		<p class="p_link" style="display:none;">
-			
-			<a href="<?php echo $this -> createUrl('/Tool/bookmark/add');?>" target="_blank" style="display:none;">add</a>
-		</p>
-
-<?php // $this -> renderPartial('_form',array('model'=>$model,'method'=>'GET'));?>
+		<div class="page-region-content">
+			<button class="standart default">Add</button>
+			<p class="p_link" style="display: none;">
+				<a href="<?php echo $this -> createUrl('/Tool/bookmark/add');?>" target="_blank" style="display: none;">add</a>
+			</p>
 
 <div class="grid_form">
 <?php
-
 $this->widget ( 'components.widgets.MetroGridView', array (
 		'dataProvider' => $data,
 		'columns' => array (
@@ -38,6 +32,6 @@ $this->widget ( 'components.widgets.MetroGridView', array (
 ) ) ?>
 
 </div>
-           </div>
-        </div>
+		</div>
+	</div>
 </div>

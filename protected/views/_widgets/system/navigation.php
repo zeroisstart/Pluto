@@ -45,7 +45,12 @@ $this->widget ( 'zii.widgets.CMenu', array (
 										'url' => array (
 												'/Content/Bookmark/list' 
 										) 
-								) 
+								),array (
+										'label' => 'Commit Log',
+										'url' => array (
+												'/Content/CommitLog/list' 
+										) 
+								)  
 						) 
 				),
 				array (
