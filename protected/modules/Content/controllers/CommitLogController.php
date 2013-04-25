@@ -33,7 +33,10 @@ class CommitLogController extends Controller {
 	public function actionMain() {
 		$this->render ( 'main' );
 	}
-	public function actionView() {
+	
+	/**
+	 */
+	public function actionView($type) {
 		$this->render ( 'view' );
 	}
 }

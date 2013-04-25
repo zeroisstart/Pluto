@@ -53,7 +53,7 @@ class TableController extends Controller {
 	}
 	/**
 	 * 切换数据库
-	 * 
+	 *
 	 * @return boolean
 	 */
 	private function _switch() {

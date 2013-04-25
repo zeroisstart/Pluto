@@ -1,14 +1,19 @@
 <?php
-/* @var $this TableController */
+if(isset($args))
+extract ( $args );
 
-$this->breadcrumbs=array(
-	'Table'=>array('/Database/table'),
-	'Create',
-);
 ?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo __FILE__; ?></tt>.
-</p>
+<div class="grid_form">
+
+	<?php $this -> widget('widget.Tool.DTInput',array('enableDatabae'=>true,'enableConnection'=>true));?>
+
+	
+	<h2>表名称</h2>
+	<div class="input-control text">
+		<input type="text" name="table_name" placeholder="Enter Table Name!"/>
+		<button class="helper" onclick="return false" tabindex="-1" type="button"></button>
+	</div>
+	
+</div>
+
