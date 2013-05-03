@@ -47,7 +47,7 @@ class TableController extends Controller {
 				if ($i % 3 == 0) {
 					echo "</tr><tr>";
 				}
-				echo "<td>" . $tables [$i] . "</td>";
+				echo '<td><div class="td_tablename">' . $tables [$i] .  "</div></td>";
 			}
 		}
 	}

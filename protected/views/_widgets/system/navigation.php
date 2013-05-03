@@ -98,6 +98,11 @@ $this->widget ( 'zii.widgets.CMenu', array (
 						'url' => array (
 								'/UserCenter/login/login' 
 						) 
+				),array (
+						'label' => 'Test',
+						'url' => array (
+								'/Test/main/main' 
+						) 
 				) 
 		) 
 ) );

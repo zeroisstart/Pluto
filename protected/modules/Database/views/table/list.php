@@ -1,8 +1,11 @@
 <?php
 extract ( $args );
 $count = count ( $tables );
-?>
+$_css = array ();
+$_js = array ('js/tool/jquery.flip.js','js/tool.trigger/flip.js' );
 
+$this->widget ( 'widget.ClientScript.autoRegisterFile', array ('css' => $_css, 'js' => $_js ) );
+?>
 <div class="grid_form">
 
 	<?php $this -> widget('widget.Tool.DTInput',array('enableDatabae'=>true,'enableConnection'=>true));?>
@@ -14,8 +17,9 @@ $count = count ( $tables );
 				</tr>
 			<tr>
 				<?php endif;?>
-				<td><?php echo reset($tables[$i])?></td>
+				<td><div class="td_tablename"><?php echo reset($tables[$i])?></div></td>
 			<?php endfor;?>
+		
 		
 		</tbody>
 		<tfoot></tfoot>
