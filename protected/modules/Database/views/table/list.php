@@ -1,8 +1,8 @@
 <?php
 extract ( $args );
 $count = count ( $tables );
-$_css = array ();
-$_js = array ('js/tool/jquery.flip.js','js/tool.trigger/flip.js' );
+$_css = array ('css/top.css');
+$_js =array();// array ('js/tool/jquery.flip.js','js/tool.trigger/flip.js' );
 
 $this->widget ( 'widget.ClientScript.autoRegisterFile', array ('css' => $_css, 'js' => $_js ) );
 ?>
