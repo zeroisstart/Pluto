@@ -50,7 +50,19 @@ $this->widget ( 'zii.widgets.CMenu', array (
 										'url' => array (
 												'/Content/CommitLog/list' 
 										) 
-								)  
+								),
+								array(
+										'label'=>'Color',
+										'url'=>array(
+												'/Content/color/list'
+									)
+								) ,
+									array(
+											'label'=>'Site Link',
+											'url'=>array(
+											'/Content/Sitelink/list'
+									)
+								)
 						) 
 				),
 				array (
@@ -83,27 +95,27 @@ $this->widget ( 'zii.widgets.CMenu', array (
 				array (
 						'label' => 'Example',
 						'url' => array (
-								'/UserCenter/login/login' 
+								'/Example/main/main' 
 						) 
 				),
 				array (
 						'label' => 'Source',
 						'url' => array (
-								'/UserCenter/login/login' 
+								'/Source/main/main' 
 						) 
 				),
 				
 				array (
 						'label' => 'Api',
 						'url' => array (
-								'/UserCenter/login/login' 
+								'/Api/main/main' 
 						) 
 				),array (
 						'label' => 'Test',
 						'url' => array (
 								'/Test/main/main' 
 						) 
-				) 
+				)
 		) 
 ) );
 ?>

@@ -171,3 +171,16 @@
 	line-height:30px;
 	height:30px;
 }
+
+div.choosed{
+	border-right:#339933 dotted 2px;
+}
+.table_options_btns{
+	width:100%;
+	height:100%;
+}
+.table_options_btns button{
+	float:right;
+	margin-left:10px;
+	margin-right:0px !important;
+}

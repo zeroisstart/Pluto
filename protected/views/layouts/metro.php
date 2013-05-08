@@ -28,8 +28,8 @@ $ary_js = array (
 		"js/modern/tile-drag.js",
 		"js/modern/calendar.js",
 		'footer' => array (
-				"js/assets/github.info.js",
-				"js/assets/google-analytics.js",
+				#"js/assets/github.info.js",
+				#"js/assets/google-analytics.js",
 				"js/google-code-prettify/prettify.js",
 				"js/sharrre/jquery.sharrre-1.3.4.min.js" 
 		) 

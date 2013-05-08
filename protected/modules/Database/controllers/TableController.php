@@ -47,7 +47,8 @@ class TableController extends Controller {
 				if ($i % 3 == 0) {
 					echo "</tr><tr>";
 				}
-				echo '<td><div class="td_tablename">' . $tables [$i] .  "</div></td>";
+				echo '<td><div class="td_tablename"><a href="javascript:void(0);" title="'.$tables [$i] .'">'.(strlen($tables [$i])>20?(mb_substr($tables [$i] , 0,20).'..'):$tables [$i]).'</a></div></td>';
+				#echo '<td><div class="td_tablename">' . $tables [$i] .  "</div></td>";
 			}
 		}
 	}
