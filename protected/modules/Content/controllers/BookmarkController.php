@@ -22,14 +22,16 @@ class BookmarkController extends Controller {
 		
 		if ($id) {
 			$model = $model->findByPk ( $id );
-			
+			 
 			if (! empty ( $bookMark )) {
 				$model->attributes = $bookMark;
 				$model->validate () && $model->update ();
 			}
 		}
 		
-		$this->render ( 'list', array (
+		$this->render ( '/core/frame', array (
+				'h1'=>'Bookmarks',
+				'small'=>'list',
 				'data' => $data,
 				'model' => $model 
 		) );

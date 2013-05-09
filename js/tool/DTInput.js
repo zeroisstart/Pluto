@@ -29,7 +29,7 @@ var table = {
     'init': function(){
         var _p = this;
         this.obj = $("#database");
-        this.obj.live("change", function(){
+        this.obj.on("change", function(){
             _p.change();
         })
     },

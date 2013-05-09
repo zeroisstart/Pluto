@@ -45,6 +45,9 @@ $this->widget ( 'widget.ClientScript.autoRegisterFile', array (
 		'baseUrl' => $baseUrl,
 		'jquery'=>true,
 ) );
+
+$cs = Yii::app() -> clientScript;
+$cs -> registerCssFile(Yii::app() -> baseUrl.'/css/top.css');
 ?>
 
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -70,7 +73,7 @@ $this->widget ( 'widget.System.navigation', array (
 
 	<script>
 		$(document).ready(function(){
-	        $('#shareme').sharrre({
+	       /* $('#shareme').sharrre({
 	            share: {
 	                googlePlus: true
 	                ,facebook: true
@@ -87,7 +90,7 @@ $this->widget ( 'widget.System.navigation', array (
 	            hover: function(api, options){
 	                $(api.element).find('.buttons').show();
 	            }
-	        });
+	        });*/
 		})
     </script>
 </body>

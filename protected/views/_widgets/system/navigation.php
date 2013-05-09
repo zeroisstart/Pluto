@@ -41,7 +41,7 @@ $this->widget ( 'zii.widgets.CMenu', array (
 						),
 						'items' => array (
 								array (
-										'label' => 'BookMark',
+										'label' => 'Bookmarks',
 										'url' => array (
 												'/Content/Bookmark/list' 
 										) 

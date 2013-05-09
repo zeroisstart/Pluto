@@ -1,9 +1,9 @@
 <?php
-/* @var $this ColorController */
+/* @var $this SitelinkController */
 
 $this->breadcrumbs=array(
-	'Color'=>array('/Design/color'),
-	'List',
+	'Sitelink'=>array('/Content/sitelink'),
+	'Main',
 );
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>

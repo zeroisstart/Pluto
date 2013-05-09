@@ -1,9 +1,9 @@
 <?php
-/* @var $this MainController */
+/* @var $this SitelinkController */
 
 $this->breadcrumbs=array(
-	'Main'=>array('/Design/main'),
-	'Main',
+	'Sitelink'=>array('/Content/sitelink'),
+	'Delete',
 );
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>

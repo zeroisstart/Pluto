@@ -2,11 +2,23 @@
 	  <?php $this -> widget('widget.Helper.title',array('h1'=>$h1,'small'=>$small))?>
 <div class="page-region">
 		<div class="page-region-content">
-			<p class="p_link" style="display: none;">
-				<a href="<?php echo $this -> createUrl('/Tool/bookmark/add');?>" target="_blank" style="display: none;">add</a>
+			
+			<?php if(isset($btns)):?>
+			<p class="p_link">
+				<?php foreach ($btns as $name => $url):?>
+					<a class="button standart default" href="<?php echo $this -> createUrl($url);?>" target="_blank" title="<?php echo $name;?>"><?php echo $name;?></a>
+				<?php endforeach;?>
 			</p>
+			
+			<?php endif;?>
+				
 			<?php 
 			$ary_args = array();
+			
+			if(isset($data)){
+				$ary_args['data']= $data;
+			}
+			
 			if(isset($model)){
 				$ary_args['model']= $model;
 			}
