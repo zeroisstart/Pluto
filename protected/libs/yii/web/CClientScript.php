@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * CClientScript class file.
  *

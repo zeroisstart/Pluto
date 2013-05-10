@@ -48,6 +48,7 @@ $this->widget ( 'widget.ClientScript.autoRegisterFile', array (
 
 $cs = Yii::app() -> clientScript;
 $cs -> registerCssFile(Yii::app() -> baseUrl.'/css/top.css');
+$cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/config/main.js');
 ?>
 
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>

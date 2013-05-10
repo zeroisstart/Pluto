@@ -231,3 +231,10 @@ div.choosed {
     line-height: 40px;
 	border: 2px dotted #000000;
 }
+
+.color_layer_selected{
+	border-bottom:#1BA1E2 solid 1px;
+}
+.color_layer_selected a{
+	color: #E51400;
+}

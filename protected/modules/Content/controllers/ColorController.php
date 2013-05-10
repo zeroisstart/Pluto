@@ -47,11 +47,13 @@ class ColorController extends Controller {
 	
 	public function actionList() {
 		
+		
 		$model = Color::model ();
 		$criteria = new CDbCriteria ();
 		$criteria->order = "color desc";
 		$data = $model->findAll ( $criteria );
-		
+		echo "test";
+		die;
 		$this->render ( '/core/frame', array ('small' => 'list', 'h1' => "Color", 'data' => $data ) );
 	
 	}

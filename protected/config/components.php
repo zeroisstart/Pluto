@@ -44,4 +44,9 @@ return array (
 		'database' => array (
 				'class' => 'application.components.System.Database' 
 		) ,
+		'RouterParser'=>array('class'=>'application.components.System.RouterParser'),
+		'cache' => array (
+				'class' => 'system.caching.CApcCache',
+		
+		),
 );
