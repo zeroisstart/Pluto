@@ -39,7 +39,7 @@ class SimpleForm extends CWidget {
 		
 		echo <<<EOT
 		<div class="input-control text">
-	          <input type="text" name="text" class="with-helper" placeholder="Input Color Value">
+	          <input type="text" name="text" class="with-helper" placeholder="Input Somethings">
 	          <button class="helper" tabindex="-1" type="button"></button>
 	          <button class="standart default submit" type="submit">Submit</button>
 	    </div>	

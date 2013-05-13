@@ -52,8 +52,6 @@ class ColorController extends Controller {
 		$criteria = new CDbCriteria ();
 		$criteria->order = "color desc";
 		$data = $model->findAll ( $criteria );
-		echo "test";
-		die;
 		$this->render ( '/core/frame', array ('small' => 'list', 'h1' => "Color", 'data' => $data ) );
 	
 	}
