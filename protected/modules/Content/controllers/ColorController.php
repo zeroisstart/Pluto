@@ -5,16 +5,14 @@
  *
  */
 class ColorController extends Controller {
-	
 	public function actionCreate() {
 		$this->render ( 'create' );
 	}
-	
 	public function actionAdd() {
 		$req = Yii::app ()->request;
 		$txt = $req->getParam ( 'text' );
 		
-		if ($txt && strlen ( $txt ) % 3 == 0 && strlen ( $txt )<7) {
+		if ($txt && strlen ( $txt ) % 3 == 0 && strlen ( $txt ) < 7) {
 			if (strlen ( $txt ) == 3) {
 				$_txt = $txt [0] . $txt [0];
 				$_txt .= $txt [1] . $txt [1];
@@ -40,26 +38,21 @@ class ColorController extends Controller {
 		}
 		$this->redirect ( $this->createUrl ( '/Content/color/list' ) );
 	}
-	
 	public function actionDelete() {
 		$this->render ( 'delete' );
 	}
-	
 	public function actionList() {
-		
-		
 		$model = Color::model ();
 		$criteria = new CDbCriteria ();
 		$criteria->order = "color desc";
 		$data = $model->findAll ( $criteria );
-		echo "test";
-		die;
-		$this->render ( '/core/frame', array ('small' => 'list', 'h1' => "Color", 'data' => $data ) );
-	
+		$this->render ( '/core/frame', array (
+				'small' => 'list',
+				'h1' => "Color",
+				'data' => $data 
+		) );
 	}
-	
 	public function actionMain() {
 		$this->render ( 'main' );
 	}
-
 }

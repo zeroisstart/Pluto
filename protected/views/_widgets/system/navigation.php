@@ -62,6 +62,11 @@ $this->widget ( 'zii.widgets.CMenu', array (
 											'url'=>array(
 											'/Content/Sitelink/list'
 									)
+								),array(
+											'label'=>'Commands',
+											'url'=>array(
+											'/Content/commands/list'
+									)
 								)
 						) 
 				),

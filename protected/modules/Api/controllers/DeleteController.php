@@ -11,11 +11,17 @@ class DeleteController extends Controller {
 		$router = $routerParser->ApiActionRouter;
 		if ($router ['count']) {
 			if ($this->_process ( $router ))
-				echo CJavaScript::encode ( array ('status' => '1' ) );
+				echo CJavaScript::encode ( array (
+						'status' => '1' 
+				) );
 			else
-				echo CJavaScript::encode ( array ('status' => '0' ) );
+				echo CJavaScript::encode ( array (
+						'status' => '0' 
+				) );
 		} else {
-			echo CJavaScript::encode ( array ('status' => '0' ) );
+			echo CJavaScript::encode ( array (
+					'status' => '0' 
+			) );
 		}
 	}
 	
@@ -24,9 +30,10 @@ class DeleteController extends Controller {
 	 * @return array array
 	 */
 	public function rule() {
-		return array ('color' => 'Color' );
+		return array (
+				'color' => 'Color' 
+		);
 	}
-	
 	public function _process(array $ary_args) {
 		$key = reset ( $ary_args ['data'] );
 		$ary_rule = $this->rule ();
@@ -36,9 +43,7 @@ class DeleteController extends Controller {
 		}
 		return false;
 	}
-	
 	public function actionView() {
 		$this->render ( 'view' );
 	}
-
 }
