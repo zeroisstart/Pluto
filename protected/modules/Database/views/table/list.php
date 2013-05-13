@@ -11,9 +11,9 @@ $this->widget ( 'widget.ClientScript.autoRegisterFile', array ('css' => $_css, '
 	<?php $this -> widget('widget.Tool.DTInput',array('enableDatabae'=>true,'enableConnection'=>true));?>
 	
 	<span class="table_options_btns">
-		<button class="default">Insert 8 Times</button>
-		<button class="default">Insert 4 Times</button>
-		<button class="default">Insert 2 Times</button>
+		<button class="default" data-times="8">Insert 8 Times</button>
+		<button class="default" data-times="4">Insert 4 Times</button>
+		<button class="default" data-times="2">Insert 2 Times</button>
 	</span>
 	
 	<table class="hovered bordered">

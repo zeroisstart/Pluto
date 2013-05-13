@@ -92,9 +92,18 @@ class Sitelink extends CActiveRecord
 		$criteria->compare('url',$this->url,true);
 		$criteria->compare('visable',$this->visable,true);
 		$criteria->compare('create_time',$this->create_time,true);
+		$criteria -> order= "create_time desc";
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'Pagination'=>array('pageSize'=>20),
 		));
+	}
+	
+	/**
+	 * @return string 
+	 */
+	public function  getTitleLink(){
+		return CHtml::link($this -> title,$this -> url);
 	}
 }

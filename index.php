@@ -33,4 +33,3 @@ if(in_array( $_SERVER ['REMOTE_ADDR'], array('::1','127.0.0.1'))){
 
 $config = PROTECTED_PATH . '/config/' . $config . '.php';
 Yii::createWebApplication ( $config )->run ();
-

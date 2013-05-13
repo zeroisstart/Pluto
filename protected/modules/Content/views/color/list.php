@@ -1,6 +1,5 @@
 <?php 
 	$this-> widget('widget.Helper.SimpleForm',array('action'=>$this-> createUrl('/Content/color/add')));
-	
 	$cs = Yii::app() -> clientScript;
 	$cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/tool.trigger/color.js',CClientScript::POS_END);
 ?>
