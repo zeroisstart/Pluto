@@ -41,22 +41,19 @@ class ColorController extends Controller {
 	public function actionDelete() {
 		$this->render ( 'delete' );
 	}
+	
 	public function actionList() {
 		$model = Color::model ();
 		$criteria = new CDbCriteria ();
 		$criteria->order = "color desc";
 		$data = $model->findAll ( $criteria );
-<<<<<<< HEAD
 		$this->render ( '/core/frame', array (
 				'small' => 'list',
 				'h1' => "Color",
 				'data' => $data 
 		) );
-=======
-		$this->render ( '/core/frame', array ('small' => 'list', 'h1' => "Color", 'data' => $data ) );
-	
->>>>>>> be3132fb6814efed15f19cbeee1b538fbb009863
 	}
+	
 	public function actionMain() {
 		$this->render ( 'main' );
 	}

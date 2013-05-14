@@ -7,6 +7,7 @@ return CMap::mergeArray(
 		        'connectionString' => 'mysql:host=localhost;dbname=codebase',
 		        'emulatePrepare'   => true,
 		        'username'         => 'root',
+                'tablePrefix'        => 'cb_',
 		        'password'         => '',
 		        'charset'          => 'utf8',
 		        'enableProfiling'  => true,

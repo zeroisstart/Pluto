@@ -1122,3 +1122,269 @@ Stack trace:
 #15 {main}
 REQUEST_URI=/Pluto/Content/Sitelink/list?c=1&link=www.baidu.com
 ---
+2013/05/14 09:35:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "Content/commands/list"。' in C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/command...')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/Pluto/Content/commands/list
+HTTP_REFERER=http://localhost/pluto/Content/commands/list
+---
+2013/05/14 09:35:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "Content/commands/list"。' in C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/command...')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/Pluto/Content/commands/list
+HTTP_REFERER=http://localhost/pluto/Content/commands/list
+---
+2013/05/14 09:36:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "Content/commands/list"。' in C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/command...')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/Pluto/Content/commands/list
+HTTP_REFERER=http://localhost/pluto/Content/commands/list
+---
+2013/05/14 09:38:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "Content/commands/list"。' in C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/command...')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/Pluto/Content/commands/list
+HTTP_REFERER=http://localhost/pluto/Content/commands/list
+---
+2013/05/14 09:39:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "Content/commands/list"。' in C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/command...')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/Pluto/Content/commands/list
+HTTP_REFERER=http://localhost/Pluto/Content
+---
+2013/05/14 09:39:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "Content/commands/list"。' in C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/command...')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/Pluto/Content/commands/list
+HTTP_REFERER=http://localhost/Pluto/Content
+---
+2013/05/14 09:53:51 [error] [php] Undefined variable: h1 (C:\webaccess\V\Pluto\protected\modules\Content\views\core\frame.php:2)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(869): CommandsController->renderFile()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(782): CommandsController->renderPartial()
+#2 C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommandsController.php(23): CommandsController->render()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): CommandsController->actionList()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): CommandsController->runAction()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): CommandsController->runActionWithFilters()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CommandsController->run()
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/Content/commands/list
+in C:\webaccess\V\Pluto\protected\modules\Content\views\core\frame.php (2)
+in C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommandsController.php (23)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 10:15:24 [error] [exception.CException] exception 'CException' with message '属性 "CDbConnection.table_pre" 未被定义.' in C:\webaccess\V\Pluto\protected\libs\yii\base\CComponent.php:173
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\YiiBase.php(220): CComponent->__set('table_pre', 'cb')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(438): CModule->getComponent('db')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(CommitLog))
+#6 C:\webaccess\V\Pluto\protected\modules\Content\models\CommitLog.php(20): CActiveRecord::model('CommitLog')
+#7 C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommitLogController.php(22): CommitLog::model()
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): CommitLogController->actionList()
+#9 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('list')
+#13 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/CommitL...')
+#14 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#16 {main}
+REQUEST_URI=/Pluto/Content/CommitLog/list
+HTTP_REFERER=http://localhost/Pluto/Content/commands/list
+---
+2013/05/14 10:16:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'codebase.commit_log' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `commit_log`.
+in C:\webaccess\V\Pluto\protected\modules\Content\models\CommitLog.php (20)
+in C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommitLogController.php (22)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 10:16:10 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "CommitLog" 对应的 table "commit_log".' in C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(CommitLog))
+#1 C:\webaccess\V\Pluto\protected\modules\Content\models\CommitLog.php(20): CActiveRecord::model('CommitLog')
+#2 C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommitLogController.php(22): CommitLog::model()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): CommitLogController->actionList()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('list')
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/CommitL...')
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#11 {main}
+REQUEST_URI=/Pluto/Content/CommitLog/list
+HTTP_REFERER=http://localhost/Pluto/Content/commands/list
+---
+2013/05/14 10:21:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'codebase.commit_log' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `commit_log`.
+in C:\webaccess\V\Pluto\protected\modules\Content\models\CommitLog.php (20)
+in C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommitLogController.php (22)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 10:21:29 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "CommitLog" 对应的 table "commit_log".' in C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(CommitLog))
+#1 C:\webaccess\V\Pluto\protected\modules\Content\models\CommitLog.php(20): CActiveRecord::model('CommitLog')
+#2 C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommitLogController.php(22): CommitLog::model()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): CommitLogController->actionList()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('list')
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/CommitL...')
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#11 {main}
+REQUEST_URI=/Pluto/Content/CommitLog/list
+HTTP_REFERER=http://localhost/Pluto/Content/commands/list
+---
+2013/05/14 10:23:53 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'codebase.bookmark' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `bookmark`.
+in C:\webaccess\V\Pluto\protected\modules\Content\controllers\BookmarkController.php (10)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 10:23:53 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Bookmark" 对应的 table "bookmark".' in C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Bookmark))
+#1 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(402): CActiveRecord::model('Bookmark')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\webaccess\V\Pluto\protected\modules\Content\controllers\BookmarkController.php(10): CActiveRecord->__construct()
+#4 [internal function]: BookmarkController->actionList('')
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookmarkController), Array)
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookmarkController), Object(ReflectionMethod), Array)
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('list')
+#11 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/Bookmar...')
+#12 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#14 {main}
+REQUEST_URI=/Pluto/Content/Bookmark/list
+HTTP_REFERER=http://localhost/Pluto/Content/color/list
+---
+2013/05/14 10:23:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'codebase.bookmark' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `bookmark`.
+in C:\webaccess\V\Pluto\protected\modules\Content\controllers\BookmarkController.php (10)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 10:23:56 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Bookmark" 对应的 table "bookmark".' in C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Bookmark))
+#1 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(402): CActiveRecord::model('Bookmark')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\webaccess\V\Pluto\protected\modules\Content\controllers\BookmarkController.php(10): CActiveRecord->__construct()
+#4 [internal function]: BookmarkController->actionList('')
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BookmarkController), Array)
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BookmarkController), Object(ReflectionMethod), Array)
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('list')
+#11 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/Bookmar...')
+#12 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#14 {main}
+REQUEST_URI=/Pluto/Content/Bookmark/list
+HTTP_REFERER=http://localhost/Pluto/Content/color/list
+---
+2013/05/14 10:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "post" 动作.' in C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php:483
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(270): CController->missingAction('post')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('post')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Tool/Postfile/p...')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/Pluto/Tool/Postfile/post
+HTTP_REFERER=http://localhost/Pluto/Tool/main/main
+---
+2013/05/14 10:53:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "post" 动作.' in C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php:483
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(270): CController->missingAction('post')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('post')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Tool/Postfile/p...')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/Pluto/Tool/Postfile/post
+---
+2013/05/14 10:53:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "post" 动作.' in C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php:483
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(270): CController->missingAction('post')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('post')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Tool/postfile/p...')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/Pluto/Tool/postfile/post
+---
+2013/05/14 10:53:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php:483
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(270): CController->missingAction('')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Tool/postfile')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/Pluto/Tool/postfile/
+---
+2013/05/14 10:54:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "man" 动作.' in C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php:483
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(270): CController->missingAction('man')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('man')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Tool/postfile/m...')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/Pluto/Tool/postfile/man
+---
+2013/05/14 15:51:09 [error] [php] Use of undefined constant time - assumed 'time' (C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php:7)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(869): MainController->renderFile()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(782): MainController->renderPartial()
+#2 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(9): MainController->render()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php (7)
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (9)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 15:52:07 [error] [php] Undefined variable: time (C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php:8)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(869): MainController->renderFile()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(782): MainController->renderPartial()
+#2 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(9): MainController->render()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php (8)
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (9)
+in C:\webaccess\V\Pluto\index.php (35)

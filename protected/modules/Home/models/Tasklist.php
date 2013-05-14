@@ -1,22 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "color".
+ * This is the model class for table "{{tasklist}}".
  *
- * The followings are the available columns in table 'color':
+ * The followings are the available columns in table '{{tasklist}}':
  * @property integer $id
- * @property integer $R
- * @property integer $G
- * @property integer $B
- * @property string $color
+ * @property integer $uid
+ * @property string $text
+ * @property integer $hours
  * @property string $create_time
+ * @property string $finish_time
+ * @property string $status
  */
-class Color extends CActiveRecord
+class Tasklist extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Color the static model class
+	 * @return Tasklist the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -28,7 +29,7 @@ class Color extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{color}}';
+		return '{{tasklist}}';
 	}
 
 	/**
@@ -39,12 +40,12 @@ class Color extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('R, G, B', 'numerical', 'integerOnly'=>true),
-			array('color', 'length', 'max'=>45),
-			array('create_time', 'safe'),
+			array('uid, hours', 'numerical', 'integerOnly'=>true),
+			array('status', 'length', 'max'=>1),
+			array('text, create_time, finish_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, R, G, B, color, create_time', 'safe', 'on'=>'search'),
+			array('id, uid, text, hours, create_time, finish_time, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,21 +67,14 @@ class Color extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'R' => 'R',
-			'G' => 'G',
-			'B' => 'B',
-			'color' => 'Color',
+			'uid' => 'Uid',
+			'text' => 'Text',
+			'hours' => 'Hours',
 			'create_time' => 'Create Time',
+			'finish_time' => 'Finish Time',
+			'status' => 'Status',
 		);
 	}
-	/**
-	 * 
-	 * @param string $color
-	 */
-	public function checkIsExists($color){
-		return $this ->exists('color=:color',array(':color'=>$color));	
-	}
-	
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
@@ -94,11 +88,12 @@ class Color extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('R',$this->R);
-		$criteria->compare('G',$this->G);
-		$criteria->compare('B',$this->B);
-		$criteria->compare('color',$this->color,true);
+		$criteria->compare('uid',$this->uid);
+		$criteria->compare('text',$this->text,true);
+		$criteria->compare('hours',$this->hours);
 		$criteria->compare('create_time',$this->create_time,true);
+		$criteria->compare('finish_time',$this->finish_time,true);
+		$criteria->compare('status',$this->status,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

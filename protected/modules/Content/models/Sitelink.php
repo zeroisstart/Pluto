@@ -28,7 +28,7 @@ class Sitelink extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'sitelink';
+		return '{{sitelink}}';
 	}
 
 	/**

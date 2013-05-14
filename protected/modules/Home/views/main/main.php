@@ -1,34 +1,55 @@
+
+
+
 <div class="page" id="page-index">
+	<div class="page-region">
+		<div class="page-region-content">
+            <h5 class="text-right"><?php echo date('Y-m-d H:i:s',time());?></h5>		    
+                <div class="grid w620 main_panel">
+                      <div class="row">
+                          <div class="span8">
+                              <div class="main_task">
+                                  <ul class="task_list">
+                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
+                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
+                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
+                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
+                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
+                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="span8">
+                              <div class="main_content">
+                                  
+                              </div>
+                          </div>
+                      </div>
+                </div>
+                
+                <div class="grid main_panel w300 ml20">
+                        <div class="row">
+                          <div class="span4">
+                              <div class="main_command_list">
+                                  <?php for($i=0;$i<9;$i++):?>
+                                  <button class="command-button default w280">Yes, share and connect<small>Use this option for home or work</small></button>
+                                  <?php endfor;?>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+            
 <?php
-/* @var $this MainController */
+            
 
-$this->breadcrumbs = array (
-		'Main' 
-);
-?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
-
-<p>
-	You may change the content of this page by modifying the file
-	<tt><?php echo __FILE__; ?></tt>
-	.
-</p>
-<?php
-$this->widget ( 'ext.popup.popup' );
-
-$form = $this->beginWidget ( 'CActiveForm', array (
-		'id' => 'contact-form',
-		// 'action' => $this->createUrl ( '/System/upload/ImgUpload' ),
-		'action' => $this->createUrl ( '/System/upload/AttachmentUpload' ),
-		'enableClientValidation' => true,
-		'method' => 'post',
-		'htmlOptions' => array (
-				'enctype' => "multipart/form-data" 
-		),
-		'clientOptions' => array (
-				'validateOnSubmit' => true 
-		) 
-) );
+// $this->widget ( 'ext.popup.popup' );
+$form = $this->beginWidget('CActiveForm', 
+        array('id' => 'contact-form', 
+                // 'action' => $this->createUrl ( '/System/upload/ImgUpload' ),
+                'action' => $this->createUrl('/System/upload/AttachmentUpload'), 
+                'enableClientValidation' => true, 'method' => 'post', 
+                'htmlOptions' => array('enctype' => "multipart/form-data"), 
+                'clientOptions' => array('validateOnSubmit' => true)));
 
 ?>
 <?php
@@ -45,25 +66,10 @@ $this->widget ( 'widget.system.uploadForm', array (
 
 ?>
 
-<?php echo CHtml::submitButton('submit');?>
+<?php //echo CHtml::submitButton('submit');?>
 
 <?php $this -> endWidget()?>
+</div>
 
-<script type="text/javascript">
-	/*$(document).ready(function(){
-		hm.confirm({
-				noTitle : true, 
-				text : '这里面是提示', 
-				height : 'auto',
-				width : 210,
-				confirm:'确定',
-				cancel:'取消'
-			},function(){
-				alert('ok');
-			},function(){
-				alert('cancel');
-				});
-	})*/
-</script>
-
+	</div>
 </div>

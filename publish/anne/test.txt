@@ -1,0 +1,104 @@
+德问，最纯粹的编程社交问答
+帮您解答各类编程问题，交流与扩展专业知识及技能。
+
+德问
+
+首 页
+待解决
+浏 览 
+登 录
+PHP
+curl模拟文件上传，中文路径编码问题？
+ando
+1 票
+ ando 22
+文件编码是UTF-8,用curl模拟文件上传，路径是中文的话，如果没有那行编码转换就不会执行，这是怎么回事啊，网上也搜索不到。
+
+  
+$url = 'http://localhost/poems/res.php';
+ 
+    $path =  'D:\WWW\poems\图片\立春.jpg';
+    $path = iconv('UTF-8', 'GB2312', $path);
+    $post_data = array(
+        "pic_name" => "哈哈哈哈",
+        "file" => "@$path"
+    );
+ 
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+    $output = curl_exec($ch);
+    curl_close($ch);
+    echo $output."<br>";
+
+那个pic_name在res.php直接用$_POST['pic_name']中文就能正确获取，file相关的中文都是乱码。。，再转换成UTF-8就正常，文件上传有编码限制吗？
+
+sonyanda sonyanda42 编辑于2012-11-30
+评论 (0) ? 分享 ? 链接 ? 2012-11-30　
+3个答案 票 数  
+老虎会游泳
+0 票
+老虎会游泳256
+最佳答案
+其实这和CURL无关。你试试直接fopen('中文名.jpg','r');也会失败。原因就像上面说的一样，Windows系统的文件名都是GB2312/GBK/GB18030编码的，PHP不会自动把UTF-8编码的文件名转码成GBK，所以要你自己转码。接收到的文件名乱码也一样，Windows下浏览器发送的文件名也是GBK编码的。
+Linux下则不同，因为你可以自己设置文件系统的编码，通常是用UTF-8，但也可以设成GBK.
+
+评论 (1) ? 链接 ? 2012-12-01
+0
+还有，强烈建议转码时使用GBK而不是GB2312。GB2312包含的字少一些，使用某些繁体字时会失败导致字符串被截断（不加//IGNORE参数，ICONV在某个字转码失败时就会停止转换后面的字）。其实最新的标准是GB18030，但是貌似某些版本的PHP对它的支持不正常？（对此不太确定，但GBK肯定是所有都支持的） – 老虎会游泳 2012-12-01
+lazyboy
+0 票
+lazyboy3534
+看路径的话，应该是在window下做，通常我们使用的window的内码页是gb的，如果你传递一个utf8编码的路径的话，php引擎怎么去读取文件呢？因为文件路径的编码是gb的。
+
+评论 (0) ? 链接 ? 2012-11-30
+王立鹏
+0 票
+王立鹏17
+运用CURL时编码是非常重要的一个概念， 你向其它网站提交参数那编码一定要转换成它默认的编码，最好有个很好的DEBUG机制，知道哪里发生了什么， 不然可能因为编码等问题困住好久。
+
+评论 (0) ? 链接 ? 2012-11-30
+不是您所需，查看更多相关问题与答案
+excel显示utf8编码乱码, curl上传文件取得上传后 文件路径, getscript() 编码问题, excel utf-8编码查看文件, window 文字路径
+德问是一个专业的编程问答社区，请 登录 或 注册 后再提交答案
+相关问题
+php curl模拟登入网站发布文章，能做到吗？？
+php curl 模拟登录12306
+最近用php curl模拟登录youku一直失败。
+php curl 模拟自动登录
+PHP curl模拟POST提交，出现Object moved to here.错误
+linux上如何使用curl模拟post请求？
+如何用cURL中获得用户IP
+php如何通过curl上传本地文件?
+能否访问服务器页面，通过curl上传客户端文件到服务器？
+怎么实现模拟百度贴吧登陆
+关注该问题的人 （4人）
+王立鹏斑驳-neolazyboyando
+问题状态
+最近活动:2012-12-01
+共被浏览 (809) 次
+关于
+关于德问
+社区指南
+官方博客
+指导方针
+好问题的重要性
+提好的主观问题
+善用您的投票权
+协议
+服务条款
+隐私协议
+WiKi协作与CC版权
+其他
+黑客与画家
+官方微博  
+德问QQ群
+友情链接
+程序员
+结构之法 算法之道
+知识共享许可协议
+本站所有协作内容均采用CC-BY-SA 3.0协议（署名-相同方式共享）进行许可。
+京ICP备09007496号-9

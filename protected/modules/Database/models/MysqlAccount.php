@@ -28,7 +28,7 @@ class MysqlAccount extends CActiveRecord {
 	 * @return string the associated database table name
 	 */
 	public function tableName() {
-		return 'database_mysql_account';
+		return '{{database_mysql_account}}';
 	}
 	
 	/**

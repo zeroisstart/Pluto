@@ -25,7 +25,7 @@ class CommitLog extends CActiveRecord {
 	 * @return string the associated database table name
 	 */
 	public function tableName() {
-		return 'commit_log';
+		return '{{commit_log}}';
 	}
 	
 	/**

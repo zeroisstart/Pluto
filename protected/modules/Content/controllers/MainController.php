@@ -16,7 +16,7 @@ class MainController extends Controller {
 	}
 	
 	public function actionMain() {
-		$this->render ( 'main' );
+		$this -> render('/core/frame',array('h1'=>'Commands','small'=>'list'));
 	}
 	
 	public function actionUpdate() {
