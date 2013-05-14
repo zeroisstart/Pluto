@@ -21,8 +21,8 @@ require_once (LIBRARY_PATH . 'functions/debug_functions.php');
 require_once (LIBRARY_PATH . 'functions/php_5_3_functions.php');
 
 
-#$session = new CHttpSession ();
-#$session->open ();
+$session = new CHttpSession ();
+$session->open ();
 
 
 if(in_array( $_SERVER ['REMOTE_ADDR'], array('::1','127.0.0.1'))){
