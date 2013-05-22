@@ -27,13 +27,22 @@
     		</form>
 		</div>
 	</li>
-	<li class=""><a href="#">frame 2</a>
+	<li class=""><a href="#">QR CODE</a>
 		<div style="">
-			<h3>frame 2</h3>
-			Curabitur porta condimentum sem sed commodo. Praesent vestibulum,
-			libero eget lacinia pretium, metus augue dapibus odio, nec placerat
-			mauris justo non ante.
-			<div>subcontent 2</div>
+		     <form action="<?php echo $this -> createUrl('/Tool/QRCode/generate')?>" method="POST" target="response">
+		      
+		     <div class="input-control select">
+		         <span>Size:</span>  
+		         <select name="size"><option value="1">1</option><option value="2">2</option><option value="3" selected="">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+		     </div>
+		     
+			<div class="input-control textarea">
+                   <textarea style="resize:none;"></textarea>
+            </div>
+            <div class="tool_submit_btn">	
+        		    <button class="standart default submit" type="submit">Generate</button>
+        	</div>
+        	</form>
 		</div></li>
 	<li><a href="#">frame 3</a>
 		<div style="">

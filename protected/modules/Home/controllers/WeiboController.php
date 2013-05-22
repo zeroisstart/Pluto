@@ -12,6 +12,7 @@ class WeiboController extends Controller
 		
 	}
 	public function actionCallback(){
+	    
 		$weiboService=new SinaWeibo(WB_AKEY, WB_SKEY);
 		if (isset($_REQUEST['code'])) {
 			$keys = array();
@@ -35,8 +36,11 @@ class WeiboController extends Controller
 	}
 	public function actionWeibolist(){
 		$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
-		$ms  = $c->home_timeline(); // done
-		
+		$ms  = $c->home_timeline(); // done;
+		foreach ($ms['statuses'] as $key => $val){
+		    var_dump($val);
+		    var_dump($val['user']);
+		}
 		var_dump($ms);exit;
 		$uid_get = $c->get_uid();
 		$uid = $uid_get['uid'];

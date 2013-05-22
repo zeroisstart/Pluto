@@ -269,7 +269,6 @@ div.choosed {
 	border:2px dotted #00A0E9;
 }
 .main_content{
-	height:350px;
 	border:2px dotted #00A0E9;
 }
 .main_command_list{
@@ -300,4 +299,13 @@ div.choosed {
 }
 .task_list li{
 	margin-bottom:5px;
+}
+
+.weibo_msg_list{
+	margin-top:16px !important;
+	margin-left:20px;
+}
+.weibo_msg_list li{
+	margin-bottom:5px;
+	border-bottom:1px dotted;
 }

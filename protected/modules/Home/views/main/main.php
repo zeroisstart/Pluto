@@ -1,6 +1,4 @@
 
-
-
 <div class="page" id="page-index">
 	<div class="page-region">
 		<div class="page-region-content">
@@ -10,18 +8,20 @@
                           <div class="span8">
                               <div class="main_task">
                                   <ul class="task_list">
-                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
-                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
-                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
-                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
-                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
-                                      <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb</li>
+                                      <li><h4>Task</h4></li>
+                                      <?php foreach($taskDataProvider -> data as $key => $_model):?>
+                                          <li><?php echo $_model -> text;?></li>
+                                      <?php endforeach;?>
                                   </ul>
                               </div>
                           </div>
                           <div class="span8">
                               <div class="main_content">
-                                  
+                                  <ul class="weibo_msg_list">
+                                      <?php foreach($weiboData['statuses'] as $key => $msg):?>
+                                             <li><span><a href="http://www.weibo.com/u/<?php echo  $msg['user']['id'];?>" target="_blank"><?php echo $msg['user']['name']?></a></span> : <?php echo $msg['text']?></li>
+                                      <?php endforeach;?>
+                                  </ul>
                               </div>
                           </div>
                       </div>
@@ -32,16 +32,14 @@
                           <div class="span4">
                               <div class="main_command_list">
                                   <?php for($i=0;$i<9;$i++):?>
-                                  <button class="command-button default w280">Yes, share and connect<small>Use this option for home or work</small></button>
+                                      <button class="command-button default w280">Yes, share and connect<small>Use this option for home or work</small></button>
                                   <?php endfor;?>
                               </div>
                           </div>
                       </div>
                 </div>
-            
 <?php
             
-
 // $this->widget ( 'ext.popup.popup' );
 $form = $this->beginWidget('CActiveForm', 
         array('id' => 'contact-form', 

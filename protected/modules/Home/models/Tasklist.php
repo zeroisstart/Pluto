@@ -94,6 +94,7 @@ class Tasklist extends CActiveRecord
 		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('finish_time',$this->finish_time,true);
 		$criteria->compare('status',$this->status,true);
+		$criteria -> order ="create_time desc";
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
