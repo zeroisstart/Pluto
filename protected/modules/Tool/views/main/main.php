@@ -1,3 +1,8 @@
+<?php 
+$cs = Yii::app() -> clientScript;
+$cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/tool.trigger/tools.js',CClientScript::POS_END);
+?>
+
 <h2>Request Response~</h2>
 
 <iframe name="response" class="tool_response_frame">
@@ -29,21 +34,22 @@
 	</li>
 	<li class=""><a href="#">QR CODE</a>
 		<div style="">
-		     <form action="<?php echo $this -> createUrl('/Tool/QRCode/generate')?>" method="POST" target="response">
+		     <form id="QRCodeForm" action="<?php echo $this -> createUrl('/Tool/QRCode/generate')?>" method="GET" target="dialog_response">
 		      
-		     <div class="input-control select">
-		         <span>Size:</span>  
-		         <select name="size"><option value="1">1</option><option value="2">2</option><option value="3" selected="">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
-		     </div>
-		     
-			<div class="input-control textarea">
-                   <textarea style="resize:none;"></textarea>
-            </div>
-            <div class="tool_submit_btn">	
-        		    <button class="standart default submit" type="submit">Generate</button>
-        	</div>
+    		     <div class="input-control select">
+    		         <span>Size:</span>  
+    		         <select name="size"><option value="1">1</option><option value="2">2</option><option value="3" selected="">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+    		     </div>
+    		     
+    			<div class="input-control textarea">
+                       <textarea name="data" style="resize:none;"></textarea>
+                </div>
+                <div class="tool_submit_btn">	
+            		   <button class="standart default" id="qrgenerate" onClick="return false;">Generate</button>
+            	</div>
         	</form>
-		</div></li>
+		</div>
+	</li>
 	<li><a href="#">frame 3</a>
 		<div style="">
 			<h3>frame 3</h3>
@@ -59,3 +65,4 @@
 			at urna. Maecenas nec felis nulla.
 		</div></li>
 </ul>
+

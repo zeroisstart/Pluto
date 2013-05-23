@@ -1,4 +1,4 @@
-<div class="page secondary">
+ <div class="page secondary">
 	  <?php $this -> widget('widget.Helper.title',array('h1'=>$h1,'small'=>$small))?>
 <div class="page-region">
 		<div class="page-region-content">

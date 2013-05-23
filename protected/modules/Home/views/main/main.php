@@ -31,6 +31,9 @@
                         <div class="row">
                           <div class="span4">
                               <div class="main_command_list">
+                                  <a href="//www.w3cplus.com/source/front-end-developer-excellent-tool.html" target="_blank">
+                                      <button class="command-button default w280">前端开发工具<small>Loading ,CSS ,UI ,Frame ,ICON ,素材...</small></button>
+                                  </a>
                                   <?php for($i=0;$i<9;$i++):?>
                                       <button class="command-button default w280">Yes, share and connect<small>Use this option for home or work</small></button>
                                   <?php endfor;?>

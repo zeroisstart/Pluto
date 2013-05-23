@@ -77,7 +77,7 @@ class PHPQRcode extends CWidget{
          }
          
          echo '<img src="'.$PNG_WEB_DIR.basename($filename).'" /><hr/>';
-         QRtools::timeBenchmark();
+         #QRtools::timeBenchmark();
      }
 }
     
