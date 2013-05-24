@@ -263,7 +263,7 @@ div.choosed {
 }
 
 .tool_response_frame {
-    background: url('../publish/anne/response.png');
+    /*background: url('../publish/anne/response.png');*/
 }
 .main_task{
 	border:2px dotted #00A0E9;
@@ -308,4 +308,13 @@ div.choosed {
 .weibo_msg_list li{
 	margin-bottom:5px;
 	border-bottom:1px dotted;
+}
+
+div.file input{
+	width:100%;
+	height:100%;
+	border:1px #bababa solid;
+}
+.base64textarea{
+	
 }

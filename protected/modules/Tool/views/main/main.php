@@ -50,14 +50,19 @@ $cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/tool.trigger/tools.js',CCli
         	</form>
 		</div>
 	</li>
-	<li><a href="#">frame 3</a>
+	<li><a href="#">Take Base64 Encode Of Images <small> Drop file into this windows.</small></a>
 		<div style="">
-			<h3>frame 3</h3>
-			Maecenas adipiscing nulla sed sem molestie quis pulvinar lectus
-			convallis. Nam tortor arcu, gravida nec tristique sit amet, pretium
-			sagittis eros. Curabitur at nisi ut ligula ornare euismod.
-		</div></li>
-	<li><a href="#">frame 4</a>
+		
+			    <div class="input-control textarea" id='base64textarea'>
+                       <textarea name="data" style="resize:none;"></textarea>
+                </div>
+                
+                 <div class="tool_submit_btn">
+            		<button class="standart default" id="qrgenerate" onClick="return false;">Copy</button>
+            	</div>
+		</div>
+	</li>
+	<li><a href="#">frame 4</a> 
 		<div style="">
 			<h3>frame 4</h3>
 			Ut vitae tortor eget elit dictum dictum. Ut porttitor, ante non
