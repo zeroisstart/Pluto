@@ -1,7 +1,7 @@
-$(document).ready(function(){
+var tool={};
 
-    //generate QRCode
-    $('#qrgenerate').click(function(e){
+tool.qrGenerate = function(){
+	$('#qrgenerate').click(function(e){
         var _opt = {};
         var _form   = $("#QRCodeForm");
         _opt.url    = _form.attr('action');
@@ -34,7 +34,24 @@ $(document).ready(function(){
         }
 		$.ajax(_opt);
     });
-    
+}
+tool.shortUrlGenerate =function(){
+	//btn
+	$("#shortUrlGenerate").on('click',function(){
+		//form 
+		//$("#shortUrlForm")
+	})
+}
+
+tool.init = function(){
+	tool.qrGenerate();
+	tool.shortUrlGenerate();
+}
+
+
+$(document).ready(function(){
+	tool.init();	
+    //generate QRCode
 });
 
 (function(){

@@ -62,7 +62,43 @@ $cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/tool.trigger/tools.js',CCli
             	</div>
 		</div>
 	</li>
-	<li><a href="#">frame 4</a> 
+	<li><a href="#">Sina short url generate</a>
+	    
+		<div style="">
+		<from action="<?php echo $this -> createUrl('/Tool/shortUrl/Generate')?>" method="post" id="shortUrlForm">
+		        <div class="input-control text">
+                    <input type="text" class="with-helper" name="url" placeholder="Enter Url" required="required">
+                    <button class="helper" tabindex="-1" type="button"></button>
+                </div>
+            <div class="tool_submit_btn">
+            		<button class="standart default" id="shortUrlGenerate" onClick="return false;">Generate</button>
+            </div>
+            </from>
+		</div>
+		
+	</li>
+	<li><a href="#">Line sort & Unique</a> 
+		<div style="">
+		     <form id="QRCodeForm" action="<?php echo $this -> createUrl('/Tool/QRCode/generate')?>" method="GET" target="dialog_response">
+		      
+    			<div class="input-control textarea">
+                       <textarea name="data" style="resize:none;"></textarea>
+                </div>
+                <div class="tool_submit_btn">	
+            		   <button class="standart default" id="sort_uniq" onClick="return false;">sort&uniq</button>
+            	</div>
+        	</form>
+		</div>
+	</li>
+	
+		<li><a href="#">frame 4</a> 
+		<div style="">
+			<h3>frame 4</h3>
+			Ut vitae tortor eget elit dictum dictum. Ut porttitor, ante non
+			blandit gravida, felis risus feugiat neque, eu tincidunt neque ante
+			at urna. Maecenas nec felis nulla.
+		</div></li>
+		<li><a href="#">frame 4</a> 
 		<div style="">
 			<h3>frame 4</h3>
 			Ut vitae tortor eget elit dictum dictum. Ut porttitor, ante non

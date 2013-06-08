@@ -1388,3 +1388,646 @@ REQUEST_URI=/Pluto/
 in C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php (8)
 in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (9)
 in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:52:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "callback.php" 动作.' in C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php:483
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(270): CController->missingAction('callback.php')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('callback.php')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Home/weibo/call...')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/Pluto/Home/weibo/callback.php
+---
+2013/05/14 17:52:39 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:26)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/Home/weibo/callback
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (26)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:53:23 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:26)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (26)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:53:57 [error] [php] Undefined index: refresh_token (C:\webaccess\V\Pluto\protected\extensions\sinaWeibo\saetv2.ex.class.php:201)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=1405a099439a40da8bfb2598ed5ea74f
+in C:\webaccess\V\Pluto\protected\extensions\sinaWeibo\saetv2.ex.class.php (201)
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (21)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:54:30 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:26)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=1405a099439a40da8bfb2598ed5ea74f
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (26)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:54:35 [error] [php] Undefined index: refresh_token (C:\webaccess\V\Pluto\protected\extensions\sinaWeibo\saetv2.ex.class.php:201)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=4993ec9f20ef75c1e97ecfa06073632b
+in C:\webaccess\V\Pluto\protected\extensions\sinaWeibo\saetv2.ex.class.php (201)
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (21)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:54:41 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:26)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=4993ec9f20ef75c1e97ecfa06073632b
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (26)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:57:13 [error] [php] Undefined index: refresh_token (C:\webaccess\V\Pluto\protected\extensions\sinaWeibo\saetv2.ex.class.php:201)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=94c0f3d28666e0198218bd71c56c3773
+in C:\webaccess\V\Pluto\protected\extensions\sinaWeibo\saetv2.ex.class.php (201)
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (21)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:58:00 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:25)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=94c0f3d28666e0198218bd71c56c3773
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (25)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:58:18 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:25)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=94c0f3d28666e0198218bd71c56c3773
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (25)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:58:50 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:25)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=7aa7b2fc0daa2dffd381f64f7d4b8fac
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (25)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:58:54 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:25)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=7aa7b2fc0daa2dffd381f64f7d4b8fac
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (25)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:59:04 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:26)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=7aa7b2fc0daa2dffd381f64f7d4b8fac
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (26)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:59:13 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:28)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=7aa7b2fc0daa2dffd381f64f7d4b8fac
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (28)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 17:59:22 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:27)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=7aa7b2fc0daa2dffd381f64f7d4b8fac
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (27)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:00:08 [error] [php] Use of undefined constant back_url - assumed 'back_url' (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:31)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=0019c86b3f30c7c26271058805d15c37
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (31)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:00:38 [error] [php] Undefined variable: _SESSION (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:38)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/Weibolist
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (38)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:01:00 [error] [php] Undefined variable: _SESSION (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:37)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/Weibolist
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (37)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:01:16 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:37)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/Weibolist
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (37)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:01:17 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:37)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/Weibolist
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (37)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:01:17 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:37)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/Weibolist
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (37)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:01:29 [error] [php] Use of undefined constant back_url - assumed 'back_url' (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:29)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=939f094df6f82f60f73a622283b5c2ac
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (29)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:01:56 [error] [php] Undefined variable: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:26)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=939f094df6f82f60f73a622283b5c2ac
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (26)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/14 18:02:21 [error] [php] Use of undefined constant back_url - assumed 'back_url' (C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php:31)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): WeiboController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): WeiboController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): WeiboController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/index.php/Home/weibo/callback?code=fea8df11c4daa454c3f413f38a701b55
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\WeiboController.php (31)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:14:13 [error] [php] Undefined variable: task (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:9)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (9)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:14:31 [error] [php] include(SaeTClientV2.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\webaccess\V\Pluto\protected\libs\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(12): spl_autoload_call()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (12)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:15:50 [error] [php] include(SaeTClientV2.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\webaccess\V\Pluto\protected\libs\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(14): spl_autoload_call()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (14)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:16:01 [error] [php] Use of undefined constant WB_AKEY - assumed 'WB_AKEY' (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:14)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (14)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:16:26 [error] [php] include(SaeTClientV2.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\webaccess\V\Pluto\protected\libs\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(14): spl_autoload_call()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (14)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:16:49 [error] [php] include(SaeTClientV2.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\webaccess\V\Pluto\protected\libs\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(14): spl_autoload_call()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (14)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:18:02 [error] [php] include(SaeTClientV2.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\webaccess\V\Pluto\protected\libs\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(14): spl_autoload_call()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (14)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:18:32 [error] [php] include(SinaWeibo.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\webaccess\V\Pluto\protected\libs\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(12): spl_autoload_call()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (12)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:20:20 [error] [php] Undefined variable: taskDataPorivder (C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php:11)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(869): MainController->renderFile()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(782): MainController->renderPartial()
+#2 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(18): MainController->render()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php (11)
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (18)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/15 11:27:30 [error] [php] Invalid argument supplied for foreach() (C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php:20)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(869): MainController->renderFile()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(782): MainController->renderPartial()
+#2 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(18): MainController->render()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php (20)
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (18)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/22 17:30:00 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:15)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (15)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/22 17:33:13 [error] [php] Invalid argument supplied for foreach() (C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php:21)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(869): MainController->renderFile()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(782): MainController->renderPartial()
+#2 C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php(18): MainController->render()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): MainController->actionIndex()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/Home
+in C:\webaccess\V\Pluto\protected\modules\Home\views\main\main.php (21)
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (18)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/22 17:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "temp" 动作.' in C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php:483
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(270): CController->missingAction('temp')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('temp')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Tool/QRCode/tem...')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/Pluto/Tool/QRCode/temp/test.png
+HTTP_REFERER=http://localhost/Pluto/Tool/QRCode/generate
+---
+2013/05/22 17:57:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "temp" 动作.' in C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php:483
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(270): CController->missingAction('temp')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('temp')
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Tool/QRCode/tem...')
+#3 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#5 {main}
+REQUEST_URI=/Pluto/Tool/QRCode/temp/test.png
+HTTP_REFERER=http://localhost/Pluto/Tool/QRCode/generate
+---
+2013/05/22 17:59:54 [error] [php] Object of class Directory could not be converted to string (C:\webaccess\V\Pluto\protected\extensions\phpqrcode\PHPQRcode.php:34)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): QrcodeController->actionGenerate()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): QrcodeController->runAction()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): QrcodeController->runActionWithFilters()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): QrcodeController->run()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/Tool/QRCode/generate
+in C:\webaccess\V\Pluto\protected\extensions\phpqrcode\PHPQRcode.php (34)
+in C:\webaccess\V\Pluto\protected\modules\Tool\controllers\QrcodeController.php (7)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/22 18:00:10 [error] [php] Object of class Directory could not be converted to string (C:\webaccess\V\Pluto\protected\extensions\phpqrcode\PHPQRcode.php:34)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): QrcodeController->actionGenerate()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): QrcodeController->runAction()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): QrcodeController->runActionWithFilters()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): QrcodeController->run()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/Tool/QRCode/generate
+in C:\webaccess\V\Pluto\protected\extensions\phpqrcode\PHPQRcode.php (34)
+in C:\webaccess\V\Pluto\protected\modules\Tool\controllers\QrcodeController.php (7)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/22 18:00:23 [error] [php] Use of undefined constant assets - assumed 'assets' (C:\webaccess\V\Pluto\protected\extensions\phpqrcode\PHPQRcode.php:34)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): QrcodeController->actionGenerate()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): QrcodeController->runAction()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): QrcodeController->runActionWithFilters()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): QrcodeController->run()
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/Tool/QRCode/generate
+in C:\webaccess\V\Pluto\protected\extensions\phpqrcode\PHPQRcode.php (34)
+in C:\webaccess\V\Pluto\protected\modules\Tool\controllers\QrcodeController.php (7)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/22 18:02:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "qrtemp/test.png"。' in C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('qrtemp/test.png')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/Pluto/qrtemp/test.png
+HTTP_REFERER=http://localhost/Pluto/Tool/QRCode/generate
+---
+2013/05/23 09:45:14 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:15)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (15)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/24 15:07:35 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:15)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (15)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/24 15:50:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'codebase.cb_commit_log' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `cb_commit_log`.
+in C:\webaccess\V\Pluto\protected\modules\Content\models\CommitLog.php (20)
+in C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommitLogController.php (22)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/24 15:50:52 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "CommitLog" 对应的 table "{{commit_log}}".' in C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(CommitLog))
+#1 C:\webaccess\V\Pluto\protected\modules\Content\models\CommitLog.php(20): CActiveRecord::model('CommitLog')
+#2 C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommitLogController.php(22): CommitLog::model()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): CommitLogController->actionList()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('list')
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/CommitL...')
+#9 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#11 {main}
+REQUEST_URI=/Pluto/Content/CommitLog/list
+HTTP_REFERER=http://localhost/Pluto/Content/color/list
+---
+2013/05/24 15:57:38 [error] [exception.CException] exception 'CException' with message '别名 "ext.zClipboard.zClipboard" 无效。请确认它指向一个存在的PHP文件。' in C:\webaccess\V\Pluto\protected\libs\yii\YiiBase.php:316
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWidgetFactory.php(146): YiiBase::import('ext.zClipboard....', true)
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CommandsController), 'ext.zClipboard....', Array)
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CBaseController.php(172): CBaseController->createWidget('ext.zClipboard....', Array)
+#3 C:\webaccess\V\Pluto\protected\modules\Content\views\commands\list.php(24): CBaseController->widget('ext.zClipboard....', Array)
+#4 C:\webaccess\V\Pluto\protected\libs\yii\web\CBaseController.php(126): require('C:\webaccess\V\...')
+#5 C:\webaccess\V\Pluto\protected\libs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\webaccess\V\...', Array, true)
+#6 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(869): CBaseController->renderFile('C:\webaccess\V\...', Array, true)
+#7 C:\webaccess\V\Pluto\protected\modules\Content\views\core\frame.php(32): CController->renderPartial('/commands/list', Array)
+#8 C:\webaccess\V\Pluto\protected\libs\yii\web\CBaseController.php(126): require('C:\webaccess\V\...')
+#9 C:\webaccess\V\Pluto\protected\libs\yii\web\CBaseController.php(95): CBaseController->renderInternal('C:\webaccess\V\...', Array, true)
+#10 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(869): CBaseController->renderFile('C:\webaccess\V\...', Array, true)
+#11 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(782): CController->renderPartial('/core/frame', Array, true)
+#12 C:\webaccess\V\Pluto\protected\modules\Content\controllers\CommandsController.php(23): CController->render('/core/frame', Array)
+#13 C:\webaccess\V\Pluto\protected\libs\yii\web\actions\CInlineAction.php(49): CommandsController->actionList()
+#14 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): CController->run('list')
+#18 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('Content/command...')
+#19 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#21 {main}
+REQUEST_URI=/Pluto/Content/commands/list
+HTTP_REFERER=http://localhost/Pluto/Tool/main/main
+---
+2013/05/28 09:31:40 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:15)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (15)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/05/28 09:31:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "home/weibo/index"。' in C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php:286
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController('home/weibo/inde...')
+#1 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\webaccess\V\Pluto\index.php(35): CApplication->run()
+#3 {main}
+REQUEST_URI=/Pluto/home/weibo/index
+---
+2013/06/03 13:23:01 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:15)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (15)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/06/06 09:55:43 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:15)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (15)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/06/07 09:48:19 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:15)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (15)
+in C:\webaccess\V\Pluto\index.php (35)
+2013/06/08 16:11:46 [error] [php] Undefined index: token (C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php:15)
+Stack trace:
+#0 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(286): MainController->runAction()
+#1 C:\webaccess\V\Pluto\protected\libs\yii\web\CController.php(265): MainController->runActionWithFilters()
+#2 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(282): MainController->run()
+#3 C:\webaccess\V\Pluto\protected\libs\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\webaccess\V\Pluto\protected\libs\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\webaccess\V\Pluto\index.php(35): CWebApplication->run()
+REQUEST_URI=/Pluto/
+in C:\webaccess\V\Pluto\protected\modules\Home\controllers\MainController.php (15)
+in C:\webaccess\V\Pluto\index.php (35)

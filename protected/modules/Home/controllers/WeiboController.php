@@ -8,7 +8,8 @@ class WeiboController extends Controller
 		$weiboService=new SinaWeibo(WB_AKEY, WB_SKEY);
 		$code_url = $weiboService->getAuthorizeURL( WB_CALLBACK_URL );
 		$_SESSION['back_url']=$this->createUrl('weibolist');
-		echo '<a href="'.$code_url.'">授权</a>';
+		header("Location:$code_url");
+		#echo '<a href="'.$code_url.'">授权</a>';
 		
 	}
 	public function actionCallback(){
@@ -35,13 +36,14 @@ class WeiboController extends Controller
 		}
 	}
 	public function actionWeibolist(){
+	    header("Location:/");
+	    Yii::app() -> end();
 		$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
 		$ms  = $c->home_timeline(); // done;
 		foreach ($ms['statuses'] as $key => $val){
 		    var_dump($val);
 		    var_dump($val['user']);
 		}
-		var_dump($ms);exit;
 		$uid_get = $c->get_uid();
 		$uid = $uid_get['uid'];
 		$user_message = $c->show_user_by_id( $uid);//根据ID获取用户等基本信息

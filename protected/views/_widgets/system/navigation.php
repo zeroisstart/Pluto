@@ -88,6 +88,11 @@ $this->widget ( 'zii.widgets.CMenu', array (
 										'url' => array (
 												'/Hack/exploit/main' 
 										) 
+								),array (
+										'label' => 'email',
+										'url' => array (
+												'/Hack/exploit/email' 
+										) 
 								) 
 						) 
 				),
