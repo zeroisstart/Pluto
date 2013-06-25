@@ -93,13 +93,14 @@ class CommitLog extends CActiveRecord {
 		$criteria->compare ( 'ID', $this->ID, true );
 		$criteria->compare ( 'type', $this->type );
 		$criteria->compare ( 'file', $this->file, true );
-		$criteria->compare ( 'create_time', $this->create_time, true );
+		$criteria->compare ( 'create_time', $this->create_time, false );
+		#$criteria->compare ( 'create_time', '>2013-05-31 14:03:18', false );
 		$criteria->order = "create_time desc";
 		
 		return new CActiveDataProvider ( $this, array (
 				'criteria' => $criteria,
 				'pagination' => array (
-						'pageSize' => 20 
+						'pageSize' => 4000 
 				) 
 		) );
 	}

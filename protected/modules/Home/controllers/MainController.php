@@ -7,7 +7,10 @@ class MainController extends Controller
     {
         $taskModel = Tasklist::model();
         $taskDataProvider = $taskModel -> search();
-        
+        if(!isset($_SESSION['token'])){
+            $this -> redirect($this -> createUrl('/Home/weibo/index'));
+            Yii::app() -> end();
+        }
         
         Yii::import('ext.sinaWeibo.SinaWeibo',false);
         $weiboService=new SinaWeibo(WB_AKEY, WB_SKEY);

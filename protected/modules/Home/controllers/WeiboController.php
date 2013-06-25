@@ -36,7 +36,8 @@ class WeiboController extends Controller
 		}
 	}
 	public function actionWeibolist(){
-	    header("Location:/");
+	    $root = $this -> createUrl('/');
+	    header("Location:$root");
 	    Yii::app() -> end();
 		$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
 		$ms  = $c->home_timeline(); // done;

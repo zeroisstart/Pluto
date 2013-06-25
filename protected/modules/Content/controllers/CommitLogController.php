@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /**
  * 
@@ -22,7 +22,11 @@ class CommitLogController extends Controller {
 		$model = CommitLog::model ();
 		
 		$dataProvider = $model->search ();
-		
+		#$data = $dataProvider -> data;
+		#foreach($data as $key => $model){
+		#    echo $model -> file;    
+		#}
+		#die;
 		$this->render ( '/core/frame', array (
 				'model' => $model,
 				'dataProvider' => $dataProvider,
