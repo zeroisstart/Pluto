@@ -11,6 +11,7 @@ class ColorController extends Controller {
 	public function actionAdd() {
 		$req = Yii::app ()->request;
 		$txt = $req->getParam ( 'text' );
+		$txt = str_replace('#', '', $txt);
 		
 		if ($txt && strlen ( $txt ) % 3 == 0 && strlen ( $txt ) < 7) {
 			if (strlen ( $txt ) == 3) {
