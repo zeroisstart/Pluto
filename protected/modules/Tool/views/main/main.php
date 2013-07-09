@@ -107,13 +107,20 @@ $cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/tool.trigger/tools.js',CCli
 	</li>
 	
 	
-		<li><a href="#">frame 4</a> 
+	<li>
+	    <a href="#">Comma String Parser</a> 
 		<div style="">
-			<h3>frame 4</h3>
-			Ut vitae tortor eget elit dictum dictum. Ut porttitor, ante non
-			blandit gravida, felis risus feugiat neque, eu tincidunt neque ante
-			at urna. Maecenas nec felis nulla.
-		</div></li>
+		     <form action="<?php echo $this -> createUrl('/Tool/String/parse')?>" method="POST" target="response">
+		      
+    			<div class="input-control textarea">
+                       <textarea name="text" style="resize:none;"></textarea>
+                </div>
+                <div class="tool_submit_btn">	
+            		   <button class="standart default" id="string_parse">Parse</button>
+            	</div>
+        	</form>
+		</div>
+	</li>
 		<li><a href="#">frame 4</a> 
 		<div style="">
 			<h3>frame 4</h3>
@@ -122,7 +129,3 @@ $cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/tool.trigger/tools.js',CCli
 			at urna. Maecenas nec felis nulla.
 		</div></li>
 </ul>
-
-
-
-http://221.130.48.67:7002/shop/invite.do?inviteCode=214B15C90BE18DEB171A59F828A72C47
