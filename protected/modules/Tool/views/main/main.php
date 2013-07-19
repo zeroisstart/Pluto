@@ -121,6 +121,43 @@ $cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/tool.trigger/tools.js',CCli
         	</form>
 		</div>
 	</li>
+	
+	<li>
+	    <a href="#">Space String Parser</a> 
+		<div style="">
+		     <form action="<?php echo $this -> createUrl('/Tool/String/space')?>" method="POST" target="response">
+		        <div class="input-control text">
+                    <input type="text" class="with-helper" name="pre_text" required="required">
+                    <button class="helper" tabindex="-1" type="button"></button>
+                </div>
+		      
+    			<div class="input-control textarea">
+                       <textarea name="text" style="resize:none;"></textarea>
+                </div>
+                <div class="tool_submit_btn">	
+            		   <button class="standart default" id="string_parse">Parse</button>
+            	</div>
+        	</form>
+		</div>
+	</li>
+	
+	
+	<li>
+	    <a href="#">String encode detect</a> 
+		<div style="">
+		     <form action="<?php echo $this -> createUrl('/Tool/String/detect')?>" method="POST" target="response">
+		      
+    			<div class="input-control textarea">
+                       <textarea name="text" style="resize:none;"></textarea>
+                </div>
+                <div class="tool_submit_btn">	
+            		   <button class="standart default" id="string_parse">detect</button>
+            	</div>
+            	
+        	</form>
+		</div>
+	</li>
+	
 		<li><a href="#">frame 4</a> 
 		<div style="">
 			<h3>frame 4</h3>
