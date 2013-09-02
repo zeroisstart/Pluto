@@ -77,10 +77,10 @@ class autoRegisterFile extends CWidget {
 	 * @param array $cssFiles        	
 	 * @param int $pos        	
 	 */
-	public function _registerCss(array $cssFiles, $pos = CClientScript::POS_HEAD) {
+	public function _registerCss(array $cssFiles) {
 		$_baseUrl = $this->baseUrl ? $this->baseUrl : Yii::app ()->baseUrl;
 		foreach ( $cssFiles as $cssFile ) {
-			$this->_cs->registerCssFile ( $_baseUrl . '/' . $cssFile, $pos );
+			$this->_cs->registerCssFile ( $_baseUrl . '/' . $cssFile);
 		}
 	}
 	/**
