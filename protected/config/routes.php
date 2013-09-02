@@ -9,6 +9,8 @@ return array (
 		'login' => 'UserCenter/login/login',
 		'logout' => 'UserCenter/login/logout',
 		'account' => 'UserCenter/login/login',
+        'wechat'=>'wechat/main/main',
+        'wechat/test'=>'wechat/main/test',
 		
 		'<controller:\w+>/<id:\d+>' => '<controller>/view',
 		'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
