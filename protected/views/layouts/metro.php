@@ -13,7 +13,7 @@ $ary_css = array (
 		"js/google-code-prettify/prettify.css" 
 );
 $ary_js = array (
-        'js/assets/jquery-migrate-1.2.1.js',
+       # 'js/assets/jquery-migrate-1.2.1.js',
 		"js/assets/jquery.mousewheel.min.js",
 		"js/assets/moment.js",
 		"js/assets/moment_langs.js",
