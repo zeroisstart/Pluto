@@ -30,8 +30,7 @@ class MainController extends Controller
         $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
         // extract post data
         if (! empty($postStr)) {
-            $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', 
-                    LIBXML_NOCDATA);
+            $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
             $RX_TYPE = trim($postObj->MsgType);
             switch ($RX_TYPE) {
                 case "text":
