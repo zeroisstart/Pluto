@@ -1,14 +1,15 @@
 <?php
 /**
- * This is the model class for table "wechat_record_presend".
+ * This is the model class for table "wechat_auto_reply".
  *
- * The followings are the available columns in table 'wechat_record_presend':
+ * The followings are the available columns in table 'wechat_auto_reply':
  * @property string $id
- * @property integer $userid
+ * @property string $keyword
  * @property string $txt
  * @property string $dateline
+ * @property string $disable
  */
-class WechatRecordPresend extends CActiveRecord
+class WechatAutoReply extends CActiveRecord
 {
 
     /**
@@ -16,7 +17,7 @@ class WechatRecordPresend extends CActiveRecord
      *
      * @param $className string
      *            active record class name.
-     * @return WechatRecordPresend the static model class
+     * @return WechatAutoReply the static model class
      */
     public static function model ($className = __CLASS__)
     {
@@ -29,7 +30,7 @@ class WechatRecordPresend extends CActiveRecord
      */
     public function tableName ()
     {
-        return 'wechat_record_presend';
+        return 'wechat_auto_reply';
     }
 
     /**
@@ -42,13 +43,14 @@ class WechatRecordPresend extends CActiveRecord
         // will receive user inputs.
         return array(
             array(
-                'userid', 
-                'required'
+                'keyword', 
+                'length', 
+                'max' => 255
             ), 
             array(
-                'userid', 
-                'numerical', 
-                'integerOnly' => true
+                'disable', 
+                'length', 
+                'max' => 1
             ), 
             array(
                 'txt, dateline', 
@@ -57,7 +59,7 @@ class WechatRecordPresend extends CActiveRecord
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array(
-                'id, userid, txt, dateline', 
+                'id, keyword, txt, dateline, disable', 
                 'safe', 
                 'on' => 'search'
             )
@@ -83,9 +85,10 @@ class WechatRecordPresend extends CActiveRecord
     {
         return array(
             'id' => 'ID', 
-            'userid' => 'Userid', 
+            'keyword' => 'Keyword', 
             'txt' => 'Txt', 
-            'dateline' => 'Dateline'
+            'dateline' => 'Dateline', 
+            'disable' => 'Disable'
         );
     }
 
@@ -101,28 +104,24 @@ class WechatRecordPresend extends CActiveRecord
         // should not be searched.
         $criteria = new CDbCriteria();
         $criteria->compare('id', $this->id, true);
-        $criteria->compare('userid', $this->userid);
+        $criteria->compare('keyword', $this->keyword, true);
         $criteria->compare('txt', $this->txt, true);
+        $criteria->compare('dateline', $this->dateline, true);
+        $criteria->compare('disable', $this->disable, true);
         return new CActiveDataProvider($this, 
                 array(
                     'criteria' => $criteria
                 ));
     }
 
-    /**
-     * 系统默认的提示语句
-     * 
-     * @return Ambigous <unknown, Ambigous <CActiveRecord, NULL>, unknown>|NULL
-     */
-    public function getTxt ()
+    public function findReplyByKeyword ($keyword)
     {
         $criteria = new CDbCriteria();
-        $criteria->order = "dateline desc";
+        $criteria->condition = "keyword ='{$keyword}'";
         $criteria->limit = 1;
         $row = $this->find($criteria);
-        if ($row) {
+        if ($row)
             return $row->txt;
-        }
-        return null;
+        return NULL;
     }
 }

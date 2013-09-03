@@ -65,8 +65,14 @@ class MainController extends Controller
         <FuncFlag>0</FuncFlag>
         </xml>";
         if (! empty($keyword)) {
+            $WechatAutoReply =WechatAutoReply::model();
+            $txt = $WechatAutoReply ->findReplyByKeyword($keyword);
+            if($txt){
+                $contentStr = $txt;
+            } else{
+                $contentStr = "Welcome to wechat world!".$keyword;
+            }
             $msgType = "text";
-            $contentStr = "Welcome to wechat world!".$keyword;
             $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
             echo $resultStr;
         } else {
