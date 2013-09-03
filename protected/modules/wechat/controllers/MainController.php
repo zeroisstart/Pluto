@@ -66,9 +66,8 @@ class MainController extends Controller
         </xml>";
         if (! empty($keyword)) {
             $msgType = "text";
-            $contentStr = "Welcome to wechat world!";
-            $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, 
-                    $msgType, $contentStr);
+            $contentStr = "Welcome to wechat world!".$keyword;
+            $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
             echo $resultStr;
         } else {
             echo "Input something...";
@@ -80,7 +79,13 @@ class MainController extends Controller
         $contentStr = "";
         switch ($object->Event) {
             case "subscribe":
-                $contentStr = "感谢您关注!!!!!!!!!!!!!!!!!!!!!";
+                $WechatRecordPresend =  WechatRecordPresend::model();
+                $txt = $WechatRecordPresend -> getTxt();
+                if($txt){
+                    $contentStr = $txt;
+                }else{
+                    $contentStr = "谢谢关注!";
+                }
                 break;
             default:
                 $contentStr = "Unknow Event: " . $object->Event;
