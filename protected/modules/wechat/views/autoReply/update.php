@@ -1,9 +1,9 @@
 <?php
-/* @var $this MainController */
+/* @var $this AutoReplyController */
 
 $this->breadcrumbs=array(
-	'Main'=>array('/wechat/main'),
-	'Main',
+	'Auto Reply'=>array('/wechat/autoReply'),
+	'Update',
 );
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
