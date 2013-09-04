@@ -347,3 +347,11 @@ div.file input {
 	display:block;
 	border-bottom:1px solid #2FCC71;
 }
+
+.errorSummary{
+	border-bottom:2px solid red;
+	margin-bottom:5px;
+}
+.errorSummary{
+	color:#FF0000;	
+}

@@ -91,7 +91,7 @@ $this->widget ( 'zii.widgets.CMenu', array (
 								),array (
 										'label' => 'email',
 										'url' => array (
-												'/Hack/exploit/email' 
+												'/Hack/email/main' 
 										) 
 								) ,array (
 										'label' => 'WooYun',
@@ -130,7 +130,37 @@ $this->widget ( 'zii.widgets.CMenu', array (
 						'url' => array (
 								'/Test/main/main' 
 						) 
-				)
+				),array(
+				       	'label' => 'WeChat',
+						'itemOptions' => array (
+								'data-role' => "dropdown" 
+						),
+						'linkOptions' => array (
+								'href' => '#' 
+						),
+						'url' => '',
+						'submenuOptions' => array (
+								'class' => 'dropdown-menu' 
+						),
+						'items' => array (
+								array (
+										'label' => 'AutoReply',
+										'url' => array (
+												'/wechat/autoReply/main' 
+										) 
+								),array (
+										'label' => 'Game',
+										'url' => array (
+												'/wechat/game/main' 
+										) 
+								) ,array (
+										'label' => 'QRCODE',
+										'url' => array (
+												'/wechat/qrcode/main' 
+										) 
+								) 
+						) 
+			)
 		) 
 ) );
 ?>

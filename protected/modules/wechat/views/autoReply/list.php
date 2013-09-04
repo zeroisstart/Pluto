@@ -6,9 +6,32 @@ $this->breadcrumbs=array(
 	'List',
 );
 ?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo __FILE__; ?></tt>.
-</p>
+<div class="grid_form">
+	<?php
+	$this->widget ( 'components.widgets.MetroGridView', array (
+			'dataProvider' => $dataProvider,
+			'columns' => array (
+					'id',
+					'keyword'=>array (
+							'name' => '关键字',
+							'value' => '$data->keyword' 
+					),
+					'txt' => array (
+							'name' => '自动回复',
+							'type' => 'html',
+							'value' => '"<pre>".$data->txt."</pre>"' 
+					),
+					'create_time' => array (
+							'name' => '创建时间',
+							'value' => '$data->dateline' 
+					),
+					array (
+							'header' => '操作',
+							'template' => '{update} {delete}',
+							'class' => 'components.widgets.ButtonColumn' 
+					) 
+			) 
+	) )?>
+
+</div>

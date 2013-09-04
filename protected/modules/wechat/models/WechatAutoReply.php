@@ -48,6 +48,11 @@ class WechatAutoReply extends CActiveRecord
                 'max' => 255
             ), 
             array(
+                'keyword',
+                'unique',
+                'on'=>'save',
+            ),
+            array(
                 'disable', 
                 'length', 
                 'max' => 1
@@ -85,7 +90,7 @@ class WechatAutoReply extends CActiveRecord
     {
         return array(
             'id' => 'ID', 
-            'keyword' => 'Keyword', 
+            'keyword' => '关键字', 
             'txt' => 'Txt', 
             'dateline' => 'Dateline', 
             'disable' => 'Disable'
