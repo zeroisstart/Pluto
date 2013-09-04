@@ -57,6 +57,7 @@ class WechatAutoReply extends CActiveRecord
                 'length', 
                 'max' => 1
             ), 
+            array('txt','length','max'=>200),
             array(
                 'txt, dateline', 
                 'safe'
@@ -91,7 +92,7 @@ class WechatAutoReply extends CActiveRecord
         return array(
             'id' => 'ID', 
             'keyword' => '关键字', 
-            'txt' => 'Txt', 
+            'txt' => '自动回复', 
             'dateline' => 'Dateline', 
             'disable' => 'Disable'
         );

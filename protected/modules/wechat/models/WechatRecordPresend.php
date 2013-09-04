@@ -50,6 +50,7 @@ class WechatRecordPresend extends CActiveRecord
                 'numerical', 
                 'integerOnly' => true
             ), 
+            array('txt','length','max'=>200),
             array(
                 'txt, dateline', 
                 'safe'
@@ -84,7 +85,7 @@ class WechatRecordPresend extends CActiveRecord
         return array(
             'id' => 'ID', 
             'userid' => 'Userid', 
-            'txt' => 'Txt', 
+            'txt' => '自动回复内容', 
             'dateline' => 'Dateline'
         );
     }
@@ -124,5 +125,10 @@ class WechatRecordPresend extends CActiveRecord
             return $row->txt;
         }
         return null;
+    }
+    
+    public function beforeSave(){
+        $this-> txt = mysql_real_escape_string(strip_tags($this-> txt));
+        return true;
     }
 }

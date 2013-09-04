@@ -24,7 +24,8 @@ class AutoReplyController extends Controller
             'h1' => '添加', 
             'small' => '自动回复', 
             'btns' => array(
-                '列表' => '/wechat/autoReply/list'
+                '列表' => '/wechat/autoReply/list', 
+                '默认消息' => '/wechat/autoReply/default'
             )
         );
         $ary_param['model'] = $model;
@@ -33,10 +34,10 @@ class AutoReplyController extends Controller
             $model->dateline = date('Y-m-d H:i:s');
             if ($model->validate()) {
                 $model->save();
-                $this -> run('list');
-                Yii::app() -> end();
+                $this->run('list');
+                Yii::app()->end();
             } else {
-                //var_dump($model->errors);
+                // var_dump($model->errors);
             }
             $ary_param['model'] = $model;
         }
@@ -49,7 +50,8 @@ class AutoReplyController extends Controller
             'h1' => '列表', 
             'small' => '自动回复', 
             'btns' => array(
-                '添加' => '/wechat/autoReply/add'
+                '添加' => '/wechat/autoReply/add', 
+                '默认消息' => '/wechat/autoReply/default'
             )
         );
         $model = WechatAutoReply::model();
@@ -58,6 +60,53 @@ class AutoReplyController extends Controller
         $this->render('frame', $ary_param);
     }
 
+    /**
+     * 关注后默认发送的消息
+     *
+     * @param $id integer           
+     */
+    public function actionDefault ()
+    {
+        $ary_param = array(
+            'h1' => '默认回复', 
+            'small' => '自动回复', 
+            'btns' => array(
+                '添加' => '/wechat/autoReply/add', 
+                '列表' => '/wechat/autoReply/list'
+            )
+        );
+        $req = Yii::app()->request;
+        $txt = $req->getParam('txt');
+        $txt = mysql_real_escape_string($txt);
+        $WechatRecordPresend = new WechatRecordPresend();
+        if ($txt) {
+            // set default logic
+            $WechatRecordPresend->txt = strip_tags($txt);
+            $WechatRecordPresend->userid=1;#Yii::app() -> user -> id;
+            $WechatRecordPresend->dateline = date('Y-m-d H:i:s', time());
+            if ($WechatRecordPresend->validate()) {
+               $WechatRecordPresend->save();
+            } else {
+                //var_dump($WechatRecordPresend->errors);
+            }
+            // end default logic
+        }
+        // 默认的消息
+        $data = array();
+       # $WechatRecordPresend = WechatRecordPresend::model();
+       
+        $ary_param ['model']=$WechatRecordPresend;
+        #$txt = $WechatRecordPresend->getTxt();
+        #$data['txt'] = $txt;
+        #$ary_param['data'] = $data;
+        $this->render('frame', $ary_param);
+    }
+
+    /**
+     * 删除自动回复
+     *
+     * @param $id integer           
+     */
     public function actionDelete ($id)
     {
         $model = $this->loadModel();
@@ -67,28 +116,31 @@ class AutoReplyController extends Controller
         // this->render('delete');
     }
 
+    /**
+     * 编辑自动回复
+     *
+     * @param $id integer           
+     */
     public function actionUpdate ($id)
     {
         $ary_param = array(
-                'h1' => '修改',
-                'small' => '自动回复'
+            'h1' => '修改', 
+            'small' => '自动回复'
         );
-        $model = $this -> loadModel();
+        $model = $this->loadModel();
         $ary_param['model'] = $model;
         if (isset($_POST['autoReply'])) {
             $model->attributes = $_POST['autoReply'];
             $model->dateline = date('Y-m-d H:i:s');
             if ($model->validate()) {
                 $model->update();
-                $this -> run('list');
-                Yii::app() -> end();
+                $this->run('list');
+                Yii::app()->end();
             } else {
-                //var_dump($model->errors);
+                // var_dump($model->errors);
             }
             $ary_param['model'] = $model;
         }
-        
-       
         $this->render('frame', $ary_param);
     }
 

@@ -70,7 +70,13 @@ class MainController extends Controller
             if($txt){
                 $contentStr = $txt;
             } else{
-                $contentStr = "Welcome to wechat world!".$keyword;
+                $WechatRecordPresend =  WechatRecordPresend::model();
+                $txt = $WechatRecordPresend -> getTxt();
+                if($txt){
+                    $contentStr = $txt;
+                }else{
+                    $contentStr = "Welcome to wechat world!".$keyword;
+                }
             }
             $msgType = "text";
             $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
