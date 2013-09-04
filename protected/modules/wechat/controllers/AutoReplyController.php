@@ -90,6 +90,8 @@ class AutoReplyController extends Controller
                 //var_dump($WechatRecordPresend->errors);
             }
             // end default logic
+        }else{
+            $WechatRecordPresend -> txt = $WechatRecordPresend -> getTxt();
         }
         // 默认的消息
         $data = array();
