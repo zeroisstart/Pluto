@@ -264,13 +264,16 @@
         Rotate.getWinResult = function () {
             var config = {
                 method: 'get',
-                url: 'ajax/zp.ashx?FromUserName=' + FromUserName
+                url: '<?php echo $this -> createUrl("/wechat/game/rolldraw")?>?FromUserName=' + FromUserName
             };
 
             var request = new x.WebRequest(config);
 
+            
             request.onSuccess = function (responseText, responseXML) {
-                var jsonobj = eval('(' + responseText + ')');
+                var jsonobj =eval('(' + responseText + ')');
+                //{"IsThank":false,"IsError":false,"IsWin":true,"WindId":"3964","SN":null,"PrizeId":"111","ErrorId":"-100"};
+                //{"IsThank":true,"IsError":false,"IsWin":false,"WindId":"3964","SN":null,"PrizeId":"113","ErrorId":"-100"}  不要灰心
                 IsThank = jsonobj.IsThank;
                 IsError = jsonobj.IsError;
                 IsWin = jsonobj.IsWin;
