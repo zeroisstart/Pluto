@@ -149,9 +149,19 @@ $this->widget ( 'zii.widgets.CMenu', array (
 												'/wechat/autoReply/main' 
 										) 
 								),array (
-										'label' => 'Game',
+										'label' => 'Roll',
 										'url' => array (
-												'/wechat/game/main' 
+												'/wechat/game/roll' 
+										) 
+								) ,array (
+										'label' => 'RollList',
+										'url' => array (
+												'/wechat/game/rolllist' 
+										) 
+								),array (
+										'label' => 'scratchlist',
+										'url' => array (
+												'/wechat/game/scratchlist' 
 										) 
 								) ,array (
 										'label' => 'QRCODE',

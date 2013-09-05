@@ -31,6 +31,14 @@ class MainController extends Controller
         // extract post data
         if (! empty($postStr)) {
             $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+            
+            //log logic start
+            $WechatRequestLog = new WechatRequestLog();
+            $WechatRequestLog -> dateline = date('Y-m-d H:i:s',time());
+            $WechatRequestLog -> txt = $postStr;
+            $WechatRequestLog -> save();
+            //end log logic
+            
             $RX_TYPE = trim($postObj->MsgType);
             switch ($RX_TYPE) {
                 case "text":
