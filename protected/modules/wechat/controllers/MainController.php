@@ -35,7 +35,7 @@ class MainController extends Controller
             //log logic start
             $WechatRequestLog = new WechatRequestLog();
             $WechatRequestLog -> dateline = date('Y-m-d H:i:s',time());
-            $WechatRequestLog -> txt = $postStr;
+            $WechatRequestLog -> txt =htmlspecialchars($postStr);
             $WechatRequestLog -> save();
             //end log logic
             
