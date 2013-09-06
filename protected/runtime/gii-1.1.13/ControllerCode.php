@@ -2,5 +2,5 @@
 return array (
   'template' => 'default',
   'baseClass' => 'Controller',
-  'actions' => 'list,add,view,delete',
+  'actions' => 'main',
 );
