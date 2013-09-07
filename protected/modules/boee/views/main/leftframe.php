@@ -41,7 +41,7 @@ if(targetObj.style.display!="none"){
 		<li class="ulli"><span class="ullia"  onclick="openShutManager(this,'box')">会员服务</span>
 			<ol style="display:block" id="box">
 				<li><a href="manage/hy_ruhui.html" target=manFrame class="ola_hover">入会申请</a></li>
-				<li><a href="manage/hy_yonghu.html" target=manFrame class="">会员用户</a></li>
+				<li><a href="<?php echo $this -> createUrl('/boee/member/list');?>" target=manFrame class="">会员用户</a></li>
 				
 				
 				<li><a href="manage/hy_ruihuan.html" target=manFrame class="">积分兑换活动</a></li>
