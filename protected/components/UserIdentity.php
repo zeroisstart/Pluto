@@ -32,6 +32,29 @@ class UserIdentity extends CUserIdentity
 		}
 		return $this->errorCode==self::ERROR_NONE;
 	}
+	
+	
+	/**
+	 * Authenticates a wechat user.
+	 * The example implementation makes sure if the username and password
+	 * are both 'demo'.
+	 * In practical applications, this should be changed to authenticate
+	 * against some persistent user identity storage (e.g. database).
+	 * @return boolean whether authentication succeeds.
+	 */
+	public function wechatAuthenticate()
+	{
+	    $user=WechatAccount::model()->find('LOWER(wechatid)=?',array(strtolower($this->username)));
+	    if($user===null)
+	        $this->errorCode=self::ERROR_USERNAME_INVALID;
+	    else
+	    {
+	        $this->_id=$user->id;
+	        $this->username=$user->username;
+	        $this->errorCode=self::ERROR_NONE;
+	    }
+	    return $this->errorCode==self::ERROR_NONE;
+	}
 	/**
 	 * (non-PHPdoc)
 	 * @see CUserIdentity::getId()

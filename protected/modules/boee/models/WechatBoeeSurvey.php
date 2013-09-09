@@ -147,7 +147,7 @@ class WechatBoeeSurvey extends CActiveRecord {
 		
 		$WechatSurveyList->updateAll ( array (
 				'disable' => 0 
-		), "useriid = {$userid}" );
+		), "userid = '{$userid}'" );
 	}
 	
 	/**

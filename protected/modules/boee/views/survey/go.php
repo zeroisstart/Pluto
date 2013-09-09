@@ -21,7 +21,7 @@
 					
 					<?php foreach($model -> getOptions() as $option):?>
 					<label>
-						<input type="radio" name="survey[<?php echo $model->id;?>]" value="<?php echo $option['val']?>" id="answer_<?php echo $key +1;?>" /><?php echo $option['title']?></label>
+						<input type="radio" required name="survey[<?php echo $model->id;?>]" value="<?php echo $option['val']?>" id="answer_<?php echo $key +1;?>" /><?php echo $option['title']?></label>
 					<br />
 					<?php endforeach;?>
 					
