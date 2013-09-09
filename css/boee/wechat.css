@@ -1,12 +1,12 @@
 /* CSS Document */
-body{ margin:0; padding:0; font-size:14px; font-family:"Î¢ÈíÑÅºÚ";}
+body{ margin:0; padding:0;width:100%; font-size:14px; font-family:"Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif";}
 a{ text-decoration:none; color:#000000}
 p{ padding:0px; margin:0px; line-height:32px;}
 .zc p{ padding:0px 0px 10px 0px; margin:0px; line-height:24px;}
 ul{ list-style:none; margin:0; padding:0; text-align:left;}
 .head{ text-align:center; font-size:18px; height:45px; line-height:45px; font-weight:bold; color:#FFFFFF; background:url(../../publish/anne/head_bg.jpg) repeat-x; overflow:hidden; margin-bottom:5px;}
 .head span{ margin:0px 30px;}
-.main{ width:320px; padding:8px; line-height:24px;}
+.main{ width:320px; padding:8px; line-height:24px;margin: auto;}
 .main h1{ line-height:30px; height:30px; font-size:16px; text-align:center; border-bottom:1px solid #CCCCCC;}
 .main h2{ line-height:28px; height:28px; font-size:14px; text-align:center;}
 .main h3{ line-height:24px; font-size:16px; text-align:center; border-bottom:1px dashed #CCCCCC; margin-bottom:15px;}
