@@ -12,32 +12,43 @@
 	<div class="main">
 		<h1>保亿会员绑定</h1>
 		<div class="f_16">
-			<form action="<?php echo $this-> createUrl('/wechat/bind/main')?>" method="post">
-			
+			<form action="<?php echo $this-> createUrl('/wechat/bind/main')?>"
+				method="post">
+
 				<p>
 					<b>微信用户：张晓强</b>
 				</p>
+			
+				<?php if(isset($error_msg)):?>
+				<p>
+					<b><?php echo $error_msg;?></b>
+				</p>
+				<?php endif;?>
 				
 				<p>
 					<strong>认证方式：</strong><br /> 
 					<?php if($model -> vcert == 1):?>
-					<input name="bind[vcert]" type="radio" value="1" checked="checked" /> 会员卡号&nbsp;&nbsp;
-					<input name="bind[vcert]" type="radio" value="2" />身份证号码<br /> 
+					<input name="bind[vcert]" type="radio" value="1" checked="checked" />
+					会员卡号&nbsp;&nbsp; <input name="bind[vcert]" type="radio" value="2" />身份证号码<br /> 
 					<?php else:?>
-					<input name="bind[vcert]" type="radio" value="1" /> 会员卡号&nbsp;&nbsp;
-					<input name="bind[vcert]" type="radio" value="2" checked="checked" />身份证号码<br /> 
+					<input name="bind[vcert]" type="radio" value="1" />
+					会员卡号&nbsp;&nbsp; <input name="bind[vcert]" type="radio" value="2"
+						checked="checked" />身份证号码<br /> 
 					<?php endif;?>
-					<input type="text" name="bind[cde]" class="inpt_img" maxlength="20" />
+					
+					<input type="hidden" name="fromuser"
+						value="<?php echo $model -> wechatid;?>" /> <input type="text"
+						name="bind[cde]" class="inpt_img" maxlength="20" />
 				</p>
-				
+
 				<p style="margin-top: 20px;">
 					<input class="anniu" type="submit" value="提交" />
 				</p>
-				
+
 				<p style="margin-top: 20px;">
 					<a href="#">申请入会</a>
 				</p>
-				
+
 			</form>
 		</div>
 
