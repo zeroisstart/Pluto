@@ -12,10 +12,11 @@
 class WechatAccount extends CActiveRecord
 {
 
-    public $vcert='1';
+    public $vcert = '1';
+
     /**
      * Returns the static model of the specified AR class.
-     * 
+     *
      * @param $className string
      *            active record class name.
      * @return WechatAccount the static model class
@@ -90,13 +91,13 @@ class WechatAccount extends CActiveRecord
             'username' => 'Username', 
             'wechatid' => 'Wechatid', 
             'password' => 'Password', 
-            'realname' => 'Realname'
+            'idcard' => 'Idcard'
         );
     }
 
     /**
      * Retrieves a list of models based on the current search/filter conditions.
-     * 
+     *
      * @return CActiveDataProvider the data provider that can return the models
      *         based on the search/filter conditions.
      */
@@ -109,7 +110,7 @@ class WechatAccount extends CActiveRecord
         $criteria->compare('username', $this->username, true);
         $criteria->compare('wechatid', $this->wechatid, true);
         $criteria->compare('password', $this->password, true);
-        $criteria->compare('realname', $this->realname, true);
+        $criteria->compare('idcard', $this->idcard, true);
         return new CActiveDataProvider($this, 
                 array(
                     'criteria' => $criteria
@@ -117,19 +118,70 @@ class WechatAccount extends CActiveRecord
     }
 
     /**
+     *
+     * @param $wechatid string           
+     * @param $memberID string           
+     * @return boolean
+     */
+    public function bindByMemberID ($wechatid, $memberID)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->condition = "username='{$memberID}'";
+        $criteria->limit = 1;
+        $model = $this->find($criteria);
+        if ($model) {
+            $model->wechatid = $wechatid;
+            return $model->update();
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @param $wechatid string           
+     * @param $idcard string           
+     * @return boolean
+     */
+    public function bindIDCard ($wechatid, $idcard)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->condition = "idcard='{$idcard}'";
+        $criteria->limit = 1;
+        $model = $this->find($criteria);
+        if ($model) {
+            $model->wechatid = $wechatid;
+            return $model->update();
+        }
+        return false;
+    }
+
+    /**
      * 检查是否绑定微信用户
-     * 
+     *
      * @param $wechatid string           
      * @return bool
      */
     public function isBind ($wechatid)
     {
-        $criteria = new CDbCriteria();
-        $criteria->condition = "wechatid='{$wechatid}'";
-        $criteria->limit = 1;
-        if ($this->find($criteria)) {
+        if ($this->getModelByWeChatID($wechatid)) {
             return true;
         }
         return false;
+    }
+
+    /**
+     * 获取微信模型
+     *
+     * @param $wechatid string           
+     * @return Ambigous <CActiveRecord, mixed, NULL, multitype:,
+     *         multitype:unknown Ambigous <CActiveRecord, NULL> ,
+     *         multitype:unknown >
+     */
+    public function getModelByWeChatID ($wechatid)
+    {
+        $criteria = new CDbCriteria();
+        $criteria->condition = "wechatid='{$wechatid}'";
+        $criteria->limit = 1;
+        return $this->find($criteria);
     }
 }

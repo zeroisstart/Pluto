@@ -16,6 +16,7 @@ class BindController extends Controller
             $vcert = $bind['vcert'];
             $WechatAccount->vcert = $vcert;
             $cde = $bind['cde'];
+            
             if (in_array($vcert, 
                     array(
                         1, 
@@ -49,9 +50,10 @@ class BindController extends Controller
             $ary_data = array(
                 'wechatid' => $wechatid
             );
-            $this->renderPartial('main', array(
-                'model' => $WechatAccount
-            ));
+            $this->renderPartial('main', 
+                    array(
+                        'model' => $WechatAccount
+                    ));
         }
     }
 } 

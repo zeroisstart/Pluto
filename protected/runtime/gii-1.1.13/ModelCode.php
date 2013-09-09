@@ -3,7 +3,7 @@ return array (
   'template' => 'default',
   'connectionId' => 'db',
   'tablePrefix' => '',
-  'modelPath' => 'application.modules.Content.models',
+  'modelPath' => 'application.modules.Wechat.models',
   'baseClass' => 'CActiveRecord',
   'buildRelations' => '1',
 );
