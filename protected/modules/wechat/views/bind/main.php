@@ -15,9 +15,11 @@
 			<form action="<?php echo $this-> createUrl('/wechat/bind/main')?>"
 				method="post">
 
+				<!-- 
 				<p>
 					<b>微信用户：张晓强</b>
 				</p>
+				 -->
 			
 				<?php if(isset($error_msg)):?>
 				<p>
@@ -53,7 +55,5 @@
 		</div>
 		
 	</div>
-	
-	<p>fsaafsd</p>
 </body>
 </html>
