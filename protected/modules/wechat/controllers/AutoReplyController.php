@@ -77,7 +77,7 @@ class AutoReplyController extends Controller
         );
         $req = Yii::app()->request;
         $txt = $req->getParam('txt');
-        $txt = mysql_real_escape_string($txt);
+        //$txt = mysql_real_escape_string($txt);
         $WechatRecordPresend = new WechatRecordPresend();
         if ($txt) {
             // set default logic
