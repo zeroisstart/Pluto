@@ -86,6 +86,7 @@ class MainController extends Controller
                     $contentStr = "Welcome to wechat world!".$keyword;
                 }
             }
+            $contentStr = str_replace('{fromuser}', $fromUsername, $contentStr);
             $msgType = "text";
             $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
             echo $resultStr;
