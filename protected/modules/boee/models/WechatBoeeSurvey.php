@@ -127,7 +127,7 @@ class WechatBoeeSurvey extends CActiveRecord {
 		$WechatSurveyList->dateline = date ( 'Y-m-d H:i:s', time () );
 		$WechatSurveyList->userid = $userid;
 		$WechatSurveyList->level = $step;
-		$WechatSurveyList->disable = 1;
+		$WechatSurveyList->disable = 0;
 		$WechatSurveyList->answer = json_encode ( $answer );
 		$WechatSurveyList->save ();
 	}
@@ -142,11 +142,11 @@ class WechatBoeeSurvey extends CActiveRecord {
 		$WechatSurveyList->userid = $userid;
 		$WechatSurveyList->level = $step;
 		$WechatSurveyList->answer = json_encode ( $answer );
-		$WechatSurveyList->disable = 0;
+		$WechatSurveyList->disable = 1;
 		$WechatSurveyList->save ();
 		
 		$WechatSurveyList->updateAll ( array (
-				'disable' => 0 
+				'disable' => 1 
 		), "userid = '{$userid}'" );
 	}
 	

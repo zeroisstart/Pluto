@@ -91,11 +91,11 @@ class WechatSurveyList extends CActiveRecord
     {
         return array(
             'id' => 'ID', 
-            'userid' => 'Userid', 
-            'answer' => 'Answer', 
-            'disable' => 'Disable', 
-            'dateline' => 'Dateline', 
-            'level' => 'Level'
+            'userid' => '用户ID', 
+            'answer' => '答案', 
+            'disable' => '是否通过', 
+            'dateline' => '答题时间', 
+            'level' => '关卡'
         );
     }
 
@@ -138,7 +138,7 @@ class WechatSurveyList extends CActiveRecord
         }
         $level =1;;
         foreach ($models as $model) {
-            if ($model->disable == '0') {
+            if ($model->disable == '1') {
                 return false;
             }
             $level = $model -> level;

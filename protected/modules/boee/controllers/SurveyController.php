@@ -50,8 +50,8 @@ class SurveyController extends Controller
             }
             $pass = true;
             foreach ($survey as $key => $answer) {
-                #var_dump($answer);
-                #var_dump($ary_model[$key]->answer);
+                // ar_dump($answer);
+                // ar_dump($ary_model[$key]->answer);
                 if ($answer != $ary_model[$key]->answer) {
                     $pass = false;
                 }
@@ -129,5 +129,18 @@ class SurveyController extends Controller
             return true;
         }
         return false;
+    }
+
+    public function actionList ()
+    {
+        $WechatSurveyList = WechatSurveyList::model();
+        $dataProvider = $WechatSurveyList->search();
+        
+        $this->render('list', 
+                array(
+                    'model' => $WechatSurveyList, 
+                    'dataProvider' => $dataProvider
+                ));
+        
     }
 }
