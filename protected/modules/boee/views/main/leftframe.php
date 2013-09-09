@@ -43,6 +43,7 @@ if(targetObj.style.display!="none"){
 				<li><a href="manage/hy_ruhui.html" target=manFrame class="ola_hover">入会申请</a></li>
 				<li><a href="<?php echo $this -> createUrl('/boee/member/list');?>" target=manFrame class="">会员用户</a></li>
 				
+				<li><a href="<?php echo $this-> createUrl('/boee/survey/list');?>" target=manFrame class="">问卷答题活动</a></li>
 				
 				<li><a href="manage/hy_ruihuan.html" target=manFrame class="">积分兑换活动</a></li>
 				

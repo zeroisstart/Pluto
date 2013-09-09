@@ -1,0 +1,34 @@
+/* CSS Document */
+body{ margin:0; padding:0; font-size:14px; font-family:"Î¢ÈíÑÅºÚ";}
+a{ text-decoration:none; color:#000000}
+p{ padding:0px; margin:0px; line-height:32px;}
+.zc p{ padding:0px 0px 10px 0px; margin:0px; line-height:24px;}
+ul{ list-style:none; margin:0; padding:0; text-align:left;}
+.head{ text-align:center; font-size:18px; height:45px; line-height:45px; font-weight:bold; color:#FFFFFF; background:url(../images/head_bg.jpg) repeat-x; overflow:hidden; margin-bottom:5px;}
+.head span{ margin:0px 30px;}
+.main{ width:320px; padding:8px; line-height:24px;}
+.main h1{ line-height:30px; height:30px; font-size:16px; text-align:center; border-bottom:1px solid #CCCCCC;}
+.main h2{ line-height:28px; height:28px; font-size:14px; text-align:center;}
+.main h3{ line-height:24px; font-size:16px; text-align:center; border-bottom:1px dashed #CCCCCC; margin-bottom:15px;}
+.main h3 p{ font-size:12px; color:#999999; line-height:20px; text-align:center; font-weight:normal; padding-bottom:5px;}
+.inpt{ height:20px; width:200px; border:1px solid #68ACCA;}
+.main b{ color:#FF0000;}
+.anniu{ width:150px; height:44px; border:0px; background:url(../images/anniu.jpg) no-repeat; font-size:16px; font-weight:bold; color:#FFFFFF; cursor:pointer;}
+.inpt_img{ width:275px; height:41px; background:url(../images/input.jpg) no-repeat; border:0px; font-size:16px; overflow:hidden; line-height:41px; padding:0px 10px;}
+.f_16{ font-size:16px; padding-left:10px;}
+.bg{ border:1px solid #DDDDDD; font-size:12px;}
+.bg tr{ border:1px solid #DDDDDD}
+.bg tr td{ border:1px solid #DDDDDD}
+.banner img{ width:100%; margin-bottom:15px;}
+.list li{ list-style:none; font-size:16px; line-height:22px; font-weight:bold; border-bottom:1px dashed #CCCCCC; margin-top:10px;}
+.list li a,.list li a:link,.list li a:hover{ text-decoration:none; color:#000000;}
+.list li p{ font-size:12px; color:#999999; font-weight:normal;}
+.page{ text-align:center; margin:15px 0;}
+.page .p_g{ width:58px; height:20px; border:1px solid #CCCCCC; background:#CCCCCC; margin:5px;}
+.page .f_g{ width:58px; height:20px; margin:5px 0;}
+.page .t_g{ width:28px; height:20px; border:1px solid #CCCCCC; background:#CCCCCC; margin:5px 0;}
+.fanhui{ width:66px; height:35px; background:url(../images/fanhui.png) no-repeat; border:0px; color:#FFFFFF; font-weight:bold; font-size:16px; float:left; margin-left:10px; margin-top:5px; cursor:pointer; overflow:hidden;}
+.list_pic li{ list-style:none; font-size:16px; line-height:22px; font-weight:bold; border-bottom:1px dashed #CCCCCC; margin-top:10px; overflow:hidden; height:120px;}
+.list_pic .zp img{ width:100px; height:100px; border:1px solid #CCCCCC; padding:1px; float:left; margin:0px 15px 0px 0px;}
+.list_pic  p{ font-size:12px; color:#999999; font-weight:normal;}
+.hdzp img{ width:100%; margin-top:15px;}
