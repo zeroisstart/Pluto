@@ -128,7 +128,7 @@ class WechatRecordPresend extends CActiveRecord
     }
     
     public function beforeSave(){
-        $this-> txt = mysql_real_escape_string(strip_tags($this-> txt));
+        //$this-> txt = mysql_real_escape_string(strip_tags($this-> txt));
         return true;
     }
 }
