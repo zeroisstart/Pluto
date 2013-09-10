@@ -88,28 +88,29 @@ class MainController extends Controller
                     $contentStr = "Welcome to wechat world!" . $keyword;
                 }
             }
+$time = time();
 echo <<<EOT
- <xml>
- <ToUserName><![CDATA[$toUsername]]></ToUserName>
- <FromUserName><![CDATA[$fromUsername]]></FromUserName>
- <CreateTime>1378788754</CreateTime>
- <MsgType><![CDATA[news]]></MsgType>
- <ArticleCount>2</ArticleCount>
- <Articles>
- <item>
- <Title><![CDATA[title1]]></Title> 
- <Description><![CDATA[description1]]></Description>
- <PicUrl><![CDATA[http://www.google.me/images/srpr/logo4w.png]]></PicUrl>
- <Url><![CDATA[http://www.baidu.com]]></Url>
- </item>
- <item>
- <Title><![CDATA[title]]></Title>
- <Description><![CDATA[description]]></Description>
- <PicUrl><![CDATA[http://www.google.me/images/srpr/logo4w.png]]></PicUrl>
- <Url><![CDATA[http://www.baidu.com]]></Url>
- </item>
- </Articles>
- </xml> 
+<xml>
+<ToUserName><![CDATA[$toUsername]]></ToUserName>
+<FromUserName><![CDATA[$fromUsername]]></FromUserName>
+<CreateTime>$time</CreateTime>
+<MsgType><![CDATA[news]]></MsgType>
+<ArticleCount>2</ArticleCount>
+<Articles>
+<item>
+<Title><![CDATA[title1]]></Title> 
+<Description><![CDATA[description1]]></Description>
+<PicUrl><![CDATA[http://www.google.me/images/srpr/logo4w.png]]></PicUrl>
+<Url><![CDATA[http://www.baidu.com]]></Url>
+</item>
+<item>
+<Title><![CDATA[title]]></Title>
+<Description><![CDATA[description]]></Description>
+<PicUrl><![CDATA[http://www.google.me/images/srpr/logo4w.png]]></PicUrl>
+<Url><![CDATA[http://www.baidu.com]]></Url>
+</item>
+</Articles>
+</xml> 
 EOT;
 Yii::app() -> end();
             $contentStr = str_replace('{fromuser}', $fromUsername, $contentStr);
