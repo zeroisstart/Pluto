@@ -46,13 +46,13 @@ class BindController extends Controller
                                 break;
                         }
                     } else {
+                        $WechatAccount ->login();
                         $this->renderPartial('success', 
                                 array(
                                     'model' => $WechatAccount
                                 ));
-                        $WechatAccount ->login();
-                        Yii::app()->end();
                         
+                        Yii::app()->end();
                     }
                     if ($error_cde != 1) {
                         $this->renderPartial('main', 
@@ -61,6 +61,7 @@ class BindController extends Controller
                                     'error_msg' => $msg
                                 ));
                     } else {
+                        $WechatAccount ->login();
                         $this->renderPartial('success', 
                                 array(
                                     'model' => $WechatAccount
@@ -77,12 +78,11 @@ class BindController extends Controller
             // authentic
        } else {
             if($WechatAccount -> isBind($wechatid)){
+                $WechatAccount ->login();
                 $this->renderPartial('success',
                         array(
                                 'model' => $WechatAccount
                         ));
-                $WechatAccount ->login();
-                
             }else{
                 $ary_data = array(
                         'wechatid' => $wechatid
