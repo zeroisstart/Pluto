@@ -50,6 +50,7 @@ class BindController extends Controller
                                 array(
                                     'model' => $WechatAccount
                                 ));
+                        $WechatAccount ->login();
                         Yii::app()->end();
                         
                     }
@@ -64,6 +65,7 @@ class BindController extends Controller
                                 array(
                                     'model' => $WechatAccount
                                 ));
+                        $WechatAccount ->login();
                     }
                 } else {
                     $this->renderPartial('main', 
@@ -79,6 +81,8 @@ class BindController extends Controller
                         array(
                                 'model' => $WechatAccount
                         ));
+                $WechatAccount ->login();
+                
             }else{
                 $ary_data = array(
                         'wechatid' => $wechatid

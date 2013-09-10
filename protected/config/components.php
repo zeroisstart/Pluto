@@ -51,4 +51,7 @@ return array (
         'wxResponse'=>array(
                 'class' => 'application.components.wechat.wxResponse',
         ),
+        'wechatUser'=>array(
+                'class' => 'application.components.wechat.wechatUser',
+                )
 );
