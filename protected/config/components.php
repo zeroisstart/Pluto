@@ -48,7 +48,7 @@ return array (
 		#'cache' => array (
 	    #		'class' => 'system.caching.CApcCache',
 		#),
-        'wxRespose'=>array(
+        'wxResponse'=>array(
                 'class' => 'application.components.wechat.wxResponse',
         ),
 );
