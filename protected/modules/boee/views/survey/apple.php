@@ -9,7 +9,10 @@
 
 <body>
 <div class="head">
-    恭喜您
+<?php 
+ $steps = array('1'=>'一',2=>'二',3=>'三');  
+?>
+    恭喜您 闯过了第<?php echo $steps[$model -> level];?>关
 </div>
 <div class="main">
   <div class="f_16" style="text-align:center"><b >恭喜您，闯关成功！</b></div>

@@ -109,7 +109,7 @@ class WechatSurveyList extends CActiveRecord
     {
         // Warning: Please modify the following code to remove attributes that
         // should not be searched.
-        $criteria = new CDbCriteria(); 
+        $criteria = new CDbCriteria();
         $criteria->compare('id', $this->id);
         $criteria->compare('userid', $this->userid);
         $criteria->compare('answer', $this->answer, true);
@@ -124,11 +124,20 @@ class WechatSurveyList extends CActiveRecord
 
     /**
      * 是否还能进行抽奖活动
-     * @param integer $uid
-     * @return boolean|number
+     * 
+     * @param $uid integer           
+     * @return boolean number
      */
     public function canPlay ($uid)
     {
+        $WechatAppleList = WechatAppleList::model();
+        $row = $WechatAppleList->findByAttributes(array(
+            'userid' => $uid
+        ));
+        if ($row) {
+            Yii::app()->controller -> redirect(Yii::app()->createUrl('/boee/survey/getMyApple'));
+            Yii::app()->end();
+        }
         $criteria = new CDbCriteria();
         $criteria->condition = "userid = '{$uid}'";
         $criteria->order = "level asc";
@@ -136,12 +145,13 @@ class WechatSurveyList extends CActiveRecord
         if (empty($models)) {
             return true;
         }
-        $level =1;;
+        $level = 1;
+        ;
         foreach ($models as $model) {
             if ($model->disable == '1') {
                 return false;
             }
-            $level = $model -> level;
+            $level = $model->level;
         }
         return $level;
     }
