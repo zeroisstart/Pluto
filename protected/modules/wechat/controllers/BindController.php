@@ -61,15 +61,11 @@ class BindController extends Controller
                                     'error_msg' => $msg
                                 ));
                     } else {
-                                                
                         $WechatAccount ->login();
-                        #$txt = '恭喜您绑定成功!保亿最近在举办一个答题有奖活动如果您感兴趣 <a href="'.$this -> createAbsoluteUrl('/boee/survey/main',array('fromuser'=>$WechatAccount -> wechatid)).'">请点击我哦!</a>' ;
-                        #Yii::app() -> wxResponse->responseTxt($wechatid,$txt);
                         $this->renderPartial('success', 
                                 array(
                                     'model' => $WechatAccount
                                 ));
-                        $WechatAccount ->login();
                     }
                 } else {
                     $this->renderPartial('main', 

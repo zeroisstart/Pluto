@@ -11,7 +11,7 @@
 <div class="main">
   <h1>保亿有奖答题活动开始啦！</h1>
   <div>
-  <p class="hdzp"><img src="../../images/yjdt.jpg" /></p>
+  <p class="hdzp"><img src="<?php echo Yii::app() -> baseUrl?>/images/yjdt.jpg" /></p>
  <p> <b class="f_16">答题规则：</b></p>
  <p>1.答题闯关一共有3关：<br />第一关3道题目，全部答对可领取奖品或继续闯关，点击"领取奖品"可领取奖品但闯关结束，点击"闯下一关"，则不能领取本关奖品，答错一题闯关结束；<br />
  第二关5道题目，规则同上；<br />第三关10道题目规则同上。</p>
