@@ -10,7 +10,8 @@ class MainController extends Controller
     public function actionMain ()
     {
         // this -> run('test');
-        
+        #var_dump(Yii::app() -> wxResponse);
+        #die; 
         $this->responseMsg();
     }
 
@@ -152,7 +153,6 @@ class MainController extends Controller
                         'link' => 'http://www.baidu.com'
                 ),
         );
-        echo "test";
         echo Yii::app() -> wxResponse->response($xml, $data, 'news');
         Yii::app() -> end();
     }

@@ -1,6 +1,10 @@
 <?php
 class wxResponse extends CComponent
 {
+    
+    public function init(){
+        
+    }
 
     static function valid ($token)
     {
@@ -43,8 +47,7 @@ class wxResponse extends CComponent
         $xmltpl['news'] = '<xml><ToUserName><![CDATA[%s]]></ToUserName><FromUserName><![CDATA[%s]]></FromUserName><CreateTime>%s</CreateTime><MsgType><![CDATA[news]]></MsgType>';
         $xmltpl['news'] .= '<ArticleCount>%s</ArticleCount><Articles>%s</Articles><FuncFlag>1</FuncFlag></xml>';
         if ($type == 'text') {
-            return sprintf($xmltpl['text'], $xml->FromUserName, 
-                    $xml->ToUserName, $time, $data);
+            return sprintf($xmltpl['text'], $xml->FromUserName, $xml->ToUserName, $time, $data);
         } elseif ($type == 'news') {
             if (is_array($data)) {
                 $items = '';
