@@ -144,42 +144,17 @@ class MainController extends Controller
         $content = trim($xml->Content); // 获取消息内容 $type =
         strtolower($xml->MsgType);
         $openid = $xml->FromUserName;
-        
-        switch (strtolower($content)){
-            case 'hyfu':
-                break;
-            default:
-                break;
-        }
-        
         $data = array(
                 array(
                         'title' => '敬请期待',
                         'note' => '我们还在努力开发中敬请期待',
                         'cover' => 'http://pluto.zeroisstart.com/images/please_wait.png',
-                        'link' => '#'
-                ),
-                /*
-                array(
-                        'title' => '标题',
-                        'note' => '描述',
-                        'cover' => 'http://pluto.zeroisstart.com/images/please_wait.png',
                         'link' => 'http://www.baidu.com'
                 ),
-                array(
-                        'title' => '标题',
-                        'note' => '描述',
-                        'cover' => 'http://www.google.me/images/srpr/logo4w.png',
-                        'link' => 'http://www.baidu.com'
-                ),
-                array(
-                        'title' => '更多信息',
-                        'note' => '描述',
-                        'cover' => 'http://www.google.me/images/srpr/logo4w.png',
-                        'link' => 'http://www.baidu.com'
-                )*/
         );
-        exit(Yii::app() -> wxResponse -> response($xml, $data, 'news'));
+        echo "test";
+        echo Yii::app() -> wxResponse->response($xml, $data, 'news');
+        Yii::app() -> end();
     }
 
     public function handleEvent ($object)
