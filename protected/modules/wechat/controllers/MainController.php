@@ -150,7 +150,7 @@ class MainController extends Controller
                         'title' => '敬请期待',
                         'note' => '我们还在努力开发中敬请期待',
                         'cover' => 'http://pluto.zeroisstart.com/images/please_wait.png',
-                        'link' => $this -> createUrl('/wechat/static/hyzc')
+                        'link' => $this -> createAbsoluteUrl('/wechat/static/hyzc')
                 ),
         );
         echo Yii::app() -> wxResponse->response($xml, $data, 'news');
