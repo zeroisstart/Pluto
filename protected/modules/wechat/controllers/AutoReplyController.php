@@ -81,7 +81,7 @@ class AutoReplyController extends Controller
         $WechatRecordPresend = new WechatRecordPresend();
         if ($txt) {
             // set default logic
-            $WechatRecordPresend->txt = strip_tags($txt);
+            $WechatRecordPresend->txt = $txt;
             $WechatRecordPresend->userid=1;#Yii::app() -> user -> id;
             $WechatRecordPresend->dateline = date('Y-m-d H:i:s', time());
             if ($WechatRecordPresend->validate()) {
