@@ -80,7 +80,6 @@ class BindController extends Controller
             }
             // authentic
        } else {
-            var_dump($wechatid);
             if($WechatAccount -> isBind($wechatid)){
                 $WechatAccount ->login();
                 $this->renderPartial('success',
