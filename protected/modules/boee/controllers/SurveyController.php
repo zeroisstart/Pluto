@@ -25,21 +25,19 @@ class SurveyController extends Controller
         }
         $WechatSurveyList = WechatSurveyList::model();
         $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id);
-        var_dump($canPlay);
-        die;
         $ary_survey_info = array(
             'fromuser' => $fromuser, 
             'ids' => array()
         );
         if (! $canPlay) {
             $this->renderPartial('failed');
-        } elseif ($canPlay === 1) {
+        } elseif ($canPlay == '1') {
             $ary_survey_info['step'] = 1;
             $this->renderPartial('binggo', $ary_survey_info);
-        } elseif ($canPlay === 2) {
+        } elseif ($canPlay == '2') {
             $ary_survey_info['step'] = 2;
             $this->renderPartial('binggo', $ary_survey_info);
-        } elseif ($canPlay === 3) {
+        } elseif ($canPlay == '3') {
             $this->renderPartial('wait');
         } else {
             $this->renderPartial('main', 
