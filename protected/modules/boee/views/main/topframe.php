@@ -33,7 +33,7 @@ function MM_swapImage() { //v3.0
 
 <body onload="MM_preloadimages('../../images/zkxss_07.gif','../../images/zkxss_08.gif','../../images/zkxss_10.gif','../../images/zkxss_11.gif','../../images/zkxss_12.gif','../../images/zkxss_14.gif','../../images/zkxss_13.gif')">
 <div class="logo_bg"><img src="../../images/logo.jpg" width="630" height="55" /></div>
-<div class="welcome"><span style="float:right; color:#50B3E2; padding-right:15px; line-height:24px;">张保亿 欢迎您登录 &nbsp;&nbsp;【<a href="">退出</a>】</span><span><img src="../../images/z3_01.gif" width="171" height="26" alt=""></span>
+<div class="welcome"><span style="float:right; color:#50B3E2; padding-right:15px; line-height:24px;"><?php echo Yii::app() -> user->name;?> 欢迎您登录 &nbsp;&nbsp;【<a href="<?php echo $this -> createUrl('/boee/main/logout')?>">退出</a>】</span><span><img src="../../images/z3_01.gif" width="171" height="26" alt=""></span>
 
 </div>
 

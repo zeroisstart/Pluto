@@ -26,9 +26,9 @@ return array (
 				'password' => '',
 				'charset' => 'utf8' 
 		),
-		/*'errorHandler' => array (
-				'errorAction' => 'Top/error' 
-		),*/
+		'errorHandler' => array (
+				'errorAction' => '/boee/error' 
+		),
 		'log' => array (
 				'class' => 'CLogRouter',
 				'routes' => array (

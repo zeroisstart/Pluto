@@ -77,6 +77,23 @@ class MainController extends Controller
         <FuncFlag>0</FuncFlag>
         </xml>";
         // 新闻关键字回复
+        
+        /*
+ 入会服务:rhfw:click
+我的会员卡:wdhyk:click
+社区活动:sjhd:click
+联盟商家:lmsj:click
+投诉受理:tssl:click
+物业公告:wygg:click
+在线缴费:zxjf:click
+预约维修:yywx:click
+连线物业:lxwy:click
+生活导航:shdh:click
+关注保亿:gzby:click
+预约看房:yykf:click
+联系我们:lxwm:click
+了解保亿:ljby:click
+         */
         $news_keywords = array(
             'rhfw', 
             'wdhyk', 
@@ -88,7 +105,10 @@ class MainController extends Controller
             'yywx', 
             'lxwy', 
             'shdh', 
-            'gzby'
+            'gzby',
+            'yykf',
+            'lxwm',
+            'ljby'
         );
         if (in_array($keyword, $news_keywords)) {
             $this -> outOutNews();
@@ -157,7 +177,7 @@ class MainController extends Controller
     public function handleEvent ($object)
     {
         $contentStr = "";
-        switch ($object->Event) {
+        switch (strtolower($object->Event)) {
             case "subscribe":
                 $fromUsername = $object->FromUserName;
                 $toUsername = $object->ToUserName;
@@ -169,6 +189,9 @@ class MainController extends Controller
                 } else {
                     $contentStr = "谢谢关注!";
                 }
+                break;
+            case "click":
+                $this -> outOutNews();
                 break;
             default:
                 $contentStr = "Unknow Event: " . $object->Event;

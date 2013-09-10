@@ -50,8 +50,6 @@ class SurveyController extends Controller
             }
             $pass = true;
             foreach ($survey as $key => $answer) {
-                // ar_dump($answer);
-                // ar_dump($ary_model[$key]->answer);
                 if ($answer != $ary_model[$key]->answer) {
                     $pass = false;
                 }
@@ -77,6 +75,7 @@ class SurveyController extends Controller
                         'questions' => $questions
                     ));
         }
+        
     }
     // setp two
     public function actionGo2 ()
@@ -102,6 +101,7 @@ class SurveyController extends Controller
                     ));
         }
     }
+    
     // step three
     public function actionGo3 ()
     {
