@@ -150,7 +150,7 @@ class MainController extends Controller
                         'title' => '敬请期待',
                         'note' => '我们还在努力开发中敬请期待',
                         'cover' => 'http://pluto.zeroisstart.com/images/please_wait.png',
-                        'link' => 'http://www.baidu.com'
+                        'link' => '#'
                 ),
         );
         echo Yii::app() -> wxResponse->response($xml, $data, 'news');
