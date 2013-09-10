@@ -3,6 +3,9 @@ define("TOKEN", "weixin");
 class MainController extends Controller
 {
 
+    public $FromUserName;
+    public $ToUserName;
+    
     public function actionMain ()
     {
         // this -> run('test');
@@ -30,15 +33,14 @@ class MainController extends Controller
         $postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
         // extract post data
         if (! empty($postStr)) {
-            $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-            
-            //log logic start
+            $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', 
+                    LIBXML_NOCDATA);
+            // log logic start
             $WechatRequestLog = new WechatRequestLog();
-            $WechatRequestLog -> dateline = date('Y-m-d H:i:s',time());
-            $WechatRequestLog -> txt =htmlspecialchars($postStr);
-            $WechatRequestLog -> save();
-            //end log logic
-            
+            $WechatRequestLog->dateline = date('Y-m-d H:i:s', time());
+            $WechatRequestLog->txt = htmlspecialchars($postStr);
+            $WechatRequestLog->save();
+            // end log logic
             $RX_TYPE = trim($postObj->MsgType);
             switch ($RX_TYPE) {
                 case "text":
@@ -56,7 +58,7 @@ class MainController extends Controller
             echo "";
             exit();
         }
-    }
+    } 
 
     public function handleText ($postObj)
     {
@@ -73,19 +75,43 @@ class MainController extends Controller
         <FuncFlag>0</FuncFlag>
         </xml>";
         if (! empty($keyword)) {
-            $WechatAutoReply =WechatAutoReply::model();
-            $txt = $WechatAutoReply ->findReplyByKeyword($keyword);
-            if($txt){
+            $WechatAutoReply = WechatAutoReply::model();
+            $txt = $WechatAutoReply->findReplyByKeyword($keyword);
+            if ($txt) {
                 $contentStr = $txt;
-            } else{
-                $WechatRecordPresend =  WechatRecordPresend::model();
-                $txt = $WechatRecordPresend -> getTxt();
-                if($txt){
+            } else {
+                $WechatRecordPresend = WechatRecordPresend::model();
+                $txt = $WechatRecordPresend->getTxt();
+                if ($txt) {
                     $contentStr = $txt;
-                }else{
-                    $contentStr = "Welcome to wechat world!".$keyword;
+                } else {
+                    $contentStr = "Welcome to wechat world!" . $keyword;
                 }
             }
+echo <<<EOT
+ <xml>
+ <ToUserName><![CDATA[$toUsername]]></ToUserName>
+ <FromUserName><![CDATA[$fromUsername]]></FromUserName>
+ <CreateTime>1378788754</CreateTime>
+ <MsgType><![CDATA[news]]></MsgType>
+ <ArticleCount>2</ArticleCount>
+ <Articles>
+ <item>
+ <Title><![CDATA[title1]]></Title> 
+ <Description><![CDATA[description1]]></Description>
+ <PicUrl><![CDATA[http://www.google.me/images/srpr/logo4w.png]]></PicUrl>
+ <Url><![CDATA[http://www.baidu.com]]></Url>
+ </item>
+ <item>
+ <Title><![CDATA[title]]></Title>
+ <Description><![CDATA[description]]></Description>
+ <PicUrl><![CDATA[http://www.google.me/images/srpr/logo4w.png]]></PicUrl>
+ <Url><![CDATA[http://www.baidu.com]]></Url>
+ </item>
+ </Articles>
+ </xml> 
+EOT;
+Yii::app() -> end();
             $contentStr = str_replace('{fromuser}', $fromUsername, $contentStr);
             $msgType = "text";
             $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
@@ -100,17 +126,17 @@ class MainController extends Controller
         $contentStr = "";
         switch ($object->Event) {
             case "subscribe":
-                
                 $fromUsername = $object->FromUserName;
                 $toUsername = $object->ToUserName;
+                $WechatRecordPresend = WechatRecordPresend::model();
                 
-                $WechatRecordPresend =  WechatRecordPresend::model();
-                $txt = $WechatRecordPresend -> getTxt();
+                
+                $txt = $WechatRecordPresend->getTxt();
                 $txt = str_replace('{fromuser}', $fromUsername, $txt);
                 
-                if($txt){
+                if ($txt) {
                     $contentStr = $txt;
-                }else{
+                } else {
                     $contentStr = "谢谢关注!";
                 }
                 break;
@@ -132,9 +158,55 @@ class MainController extends Controller
         <Content><![CDATA[%s]]></Content>
         <FuncFlag>%d</FuncFlag>
         </xml>";
-        $resultStr = sprintf($textTpl, $object->FromUserName, 
-                $object->ToUserName, time(), $content, $flag);
+        $resultStr = sprintf($textTpl, $object->FromUserName, $object->ToUserName, time(), $content, $flag);
         return $resultStr;
+    }
+
+    /**
+     * 根据数组参数回复图文消息
+     *
+     * @param $newsData array           
+     * @access public
+     * @return void
+     */
+    public function makeNews ($newsData = array())
+    {
+        $createTime = time();
+        $funcFlag = 0;//$this->setFlag ? 1 : 0;
+        $newTplHeader = "<xml>
+        <ToUserName><![CDATA[{$this->FromUserName}]]></ToUserName>
+        <FromUserName><![CDATA[{$this->ToUserName}]]></FromUserName>
+        <CreateTime>{$createTime}</CreateTime>
+        <MsgType><![CDATA[news]]></MsgType>
+        <ArticleCount>%s</ArticleCount><Articles>";
+        $newTplItem = "<item>
+        <Title><![CDATA[%s]]></Title>
+        <Description><![CDATA[%s]]></Description>
+        <PicUrl><![CDATA[%s]]></PicUrl>
+        <Url><![CDATA[%s]]></Url>
+        </item>";
+        $newTplFoot = "</Articles>
+        <FuncFlag>%s</FuncFlag>
+        </xml>";
+        $content = '';
+        $itemsCount = count($newsData['items']);
+        /*
+        array(
+            array('title','description','picurl','url')
+        )*/
+        
+        // 微信公众平台图文回复的消息一次最多10条
+        $itemsCount = $itemsCount < 10 ? $itemsCount : 10;
+        if ($itemsCount) {
+            foreach ($newsData['items'] as $key => $item) {
+                if ($key <= 9) {
+                    $content .= sprintf($newTplItem, $item['title'], $item['description'], $item['picurl'], $item['url']);
+                }
+            }
+        }
+        $header = sprintf($newTplHeader, $itemsCount);
+        $footer = sprintf($newTplFoot, $funcFlag);
+        return $header . $content . $footer;
     }
 
     /**
