@@ -28,8 +28,6 @@ class BindController extends Controller
                             case 1:
                                 // 1 成功 2 失败
                                 $error_cde = $WechatAccount->bindByMemberID($wechatid, $cde);
-                                
-                                
                                 if ($error_cde == 2) {
                                     $msg = '没有找到相关的会员号，请核对后重新输入。';
                                 } elseif ($error_cde == 3) {
@@ -75,14 +73,21 @@ class BindController extends Controller
                 }
             }
             // authentic
-        } else {
-            $ary_data = array(
-                'wechatid' => $wechatid
-            );
-            $this->renderPartial('main', 
-                    array(
-                        'model' => $WechatAccount
-                    ));
+       } else {
+            if($WechatAccount -> isBind($wechatid)){
+                $this->renderPartial('success',
+                        array(
+                                'model' => $WechatAccount
+                        ));
+            }else{
+                $ary_data = array(
+                        'wechatid' => $wechatid
+                );
+                $this->renderPartial('main',
+                        array(
+                                'model' => $WechatAccount
+                        ));
+            }
         }
     }
 } 
