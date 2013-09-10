@@ -16,9 +16,19 @@
 			<p>
 				<b>恭喜您！会员绑定成功！</b>
 			</p>
-
+        
+            <p style="text-align:left;">
+                            保亿最近在举办一个答题有奖活动哦.答题有奖快快行动吧!
+            </p>
+			
 			<p style="margin-top: 20px;">
-				<input class="anniu" type="button" value="返回" />
+			    <a href="<?php echo $this -> createAbsoluteUrl('/wechat/static/hyzc')?>">
+				    <input class="anniu" type="button" value="返回" />
+				</a>
+				
+				<a href="<?php echo $this -> createAbsoluteUrl('/boee/survey/main',array('fromuser'=>$model->wechatid));?>">
+				    <input class="anniu" type="button" value="我要参加" />
+				</a>
 			</p>
 		</div>
 	</div>

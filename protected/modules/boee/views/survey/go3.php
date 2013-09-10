@@ -11,7 +11,7 @@
 
 <body>
 	<div class="head">
-		<input class="fanhui" name="" type="button" value="返回" /> 第三关
+		 第三关
 	</div>
 	<div class="main">
 		<div>

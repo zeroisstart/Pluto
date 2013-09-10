@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div class="head"><input class="fanhui" name="" type="button" value="返回" />
+<div class="head">    
 第一关
 </div>
 <div class="main">

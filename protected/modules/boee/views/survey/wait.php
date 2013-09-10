@@ -8,18 +8,22 @@
 </head>
 
 <body>
+<div class="head">
+    恭喜您
+</div>
 <div class="main">
-  <div class="f_16" style="text-align:center"><b >闯关失败！</b></div><br />
- <p>失败了,不要放弃啊,我们接下来还会推出更多的活动哦!请继续关注保亿微信!<br />
-</p>
+  <div class="f_16" style="text-align:center"><b >恭喜您，闯关成功！</b></div>
  <br />
- 
+ <p>我们会尽快的与您取得联系！请不要着急!<br />
+
+</p> 
+ <br />
 <p>
-    <a href="http://www.boeegroup.com/">
-        <input class="anniu" type="button" value="闯关结束" />&nbsp;
+	<a href="http://www.boeegroup.com/">
+	    <input class="anniu" type="button" value="返回" />&nbsp;
     </a>
 </p>
-
+</a>
 </div>
 </body>
 </html>
