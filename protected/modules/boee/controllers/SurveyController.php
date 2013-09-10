@@ -25,6 +25,8 @@ class SurveyController extends Controller
         }
         $WechatSurveyList = WechatSurveyList::model();
         $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id);
+        var_dump($canPlay);
+        die;
         $ary_survey_info = array(
             'fromuser' => $fromuser, 
             'ids' => array()
