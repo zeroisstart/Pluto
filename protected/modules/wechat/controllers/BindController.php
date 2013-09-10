@@ -28,6 +28,8 @@ class BindController extends Controller
                             case 1:
                                 // 1 成功 2 失败
                                 $error_cde = $WechatAccount->bindByMemberID($wechatid, $cde);
+                                
+                                
                                 if ($error_cde == 2) {
                                     $msg = '没有找到相关的会员号，请核对后重新输入。';
                                 } elseif ($error_cde == 3) {
@@ -35,8 +37,7 @@ class BindController extends Controller
                                 }
                                 break;
                             case 2:
-                                $error_cde = $WechatAccount->bindIDCard(
-                                        $wechatid, $cde);
+                                $error_cde = $WechatAccount->bindIDCard($wechatid, $cde);
                                 if ($error_cde == 4) {
                                     $msg = '没有找到相关的证件号，请核对后重新输入。';
                                 } elseif ($error_cde == 5) {

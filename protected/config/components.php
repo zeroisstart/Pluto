@@ -45,8 +45,10 @@ return array (
 				'class' => 'application.components.System.Database' 
 		) ,
 		'RouterParser'=>array('class'=>'application.components.System.RouterParser'),
-		'cache' => array (
-				'class' => 'system.caching.CApcCache',
-		
-		),
+		#'cache' => array (
+	    #		'class' => 'system.caching.CApcCache',
+		#),
+        'wxRespose'=>array(
+                'class' => 'application.components.wechat.wxResponse',
+        ),
 );
