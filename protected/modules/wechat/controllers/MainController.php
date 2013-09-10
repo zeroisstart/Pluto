@@ -100,8 +100,14 @@ class MainController extends Controller
         $contentStr = "";
         switch ($object->Event) {
             case "subscribe":
+                
+                $fromUsername = $object->FromUserName;
+                $toUsername = $object->ToUserName;
+                
                 $WechatRecordPresend =  WechatRecordPresend::model();
                 $txt = $WechatRecordPresend -> getTxt();
+                $txt = str_replace('{fromuser}', $fromUsername, $txt);
+                
                 if($txt){
                     $contentStr = $txt;
                 }else{
