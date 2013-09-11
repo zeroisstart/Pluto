@@ -29,6 +29,9 @@ class SurveyController extends Controller
             'fromuser' => $fromuser, 
             'ids' => array()
         );
+        if($canPlay === true){
+            $canPlay=4;
+        }
         if (! $canPlay) {
             $this->renderPartial('failed');
         } elseif ($canPlay == '1') {
