@@ -47,6 +47,22 @@ class BindController extends Controller
                         }
                     } else {
                         $WechatAccount ->login();
+                        
+                        $WechatSurveyList = new WechatSurveyList();
+                        $criteria = new CDbCriteria();
+                        $criteria -> condition ="wechatid='$wechatid'";
+                        $models = $WechatSurveyList->findAll($criteria);
+                        $level = false;
+                        foreach ($models as $model) {
+                            $model -> id = Yii::app() -> user -> id;
+                            $model -> update();
+                            $level = $model->level;
+                        }
+                        if($level){
+                            $this -> redirect($this -> createUrl('/boee/survey/getMyApple',array('fromuser'=>$wechatid,'step'=>$level)));
+                        }
+                        //$wechatid
+                        
                         $this->renderPartial('success', 
                                 array(
                                     'model' => $WechatAccount
