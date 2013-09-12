@@ -127,13 +127,14 @@ class WechatBoeeSurvey extends CActiveRecord
      *
      * @param $num integer           
      */
-    public function pass ($step, $answer, $userid)
+    public function pass ($step, $answer, $userid,$wechatid)
     {
         $req = Yii::app()->request;
         $WechatSurveyList = new WechatSurveyList();
         $WechatSurveyList->dateline = date('Y-m-d H:i:s', time());
         $WechatSurveyList->userid = $userid;
         $WechatSurveyList->level = $step;
+        $WechatSurveyList->wechatid=$wechatid;
         $WechatSurveyList->disable = 0;
         $WechatSurveyList->answer = json_encode($answer);
         $WechatSurveyList->save();
@@ -143,12 +144,13 @@ class WechatBoeeSurvey extends CActiveRecord
      *
      * @param $step integer           
      */
-    public function failed ($step, $answer, $userid)
+    public function failed ($step, $answer, $userid,$wechatid)
     {
         $WechatSurveyList = new WechatSurveyList();
         $WechatSurveyList->dateline = date('Y-m-d H:i:s', time());
         $WechatSurveyList->userid = $userid;
         $WechatSurveyList->level = $step;
+        $WechatSurveyList->wechatid=$wechatid;
         $WechatSurveyList->answer = json_encode($answer);
         $WechatSurveyList->disable = 1;
         $WechatSurveyList->save();

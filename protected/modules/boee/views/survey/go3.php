@@ -33,7 +33,7 @@
 				<?php endforeach;?>
 				
 				<p style="margin-top: 20px; text-align: center">
-					<input class="anniu" type="button" value="提交" />
+					<input class="anniu" type="submit" value="提交" />
 				</p>
 			</form>
 		</div>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?php echo Yii::app() -> baseURL;?>/css/common.css" type="text/css" />
-<title>安徽联通短信转发管理维护中心</title>
+<title>保亿管理维护中心</title>
 </head>
 <frameset rows="83,*" cols="*" frameborder="no" border="0"
 	framespacing="0">

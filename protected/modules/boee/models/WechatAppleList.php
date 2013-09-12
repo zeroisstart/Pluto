@@ -97,4 +97,12 @@ class WechatAppleList extends CActiveRecord
 	public function isRecord($uid){
 	    return $this -> findByAttributes(array('userid'=>$uid)); 
 	}
+	
+	/**
+	 *
+	 * @param unknown_type $uid
+	 */
+	public function isRecordByWechatid($uid){
+	    return $this -> findByAttributes(array('userid'=>$uid));
+	}
 }

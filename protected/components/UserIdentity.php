@@ -9,6 +9,8 @@ class UserIdentity extends CUserIdentity
 {
 	private $_id;
 	
+	private $_wechatid;
+	
 	/**
 	 * Authenticates a user.
 	 * The example implementation makes sure if the username and password
@@ -51,6 +53,7 @@ class UserIdentity extends CUserIdentity
 	    {
 	        $this->_id=$user->id;
 	        $this->username=$user->username;
+	        $this->wechatid=$user->wechatid;
 	        $this->errorCode=self::ERROR_NONE;
 	    }
 	    return $this->errorCode==self::ERROR_NONE;
@@ -61,5 +64,20 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function getId(){
 		return $this -> _id;
+	}
+	
+	/**
+	 * 
+	 */
+	public function getWechatid(){
+	    return $this -> _wechatid;
+	}
+	
+	/**
+	 * 
+	 * @param string $wechatid
+	 */
+	public function setWechatid($wechatid){
+	    $this -> _wechatid = $wechatid;
 	}
 }

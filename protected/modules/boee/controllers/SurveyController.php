@@ -8,6 +8,9 @@ class SurveyController extends Controller
     {
         $req = Yii::app()->request;
         $fromuser = $req->getParam('fromuser');
+        
+        //没有登录跳转到登录页面
+        /*
         if (Yii::app()->user->isGuest) {
             if ($fromuser) {
                 if ($this->_setLogin($fromuser)) {
@@ -22,15 +25,18 @@ class SurveyController extends Controller
             } else {
                 echo "without wechatid";
             }
-        }
+        }*/
+        
         $WechatSurveyList = WechatSurveyList::model();
-        $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id);
+        $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id,$fromuser);
+        
         $ary_survey_info = array(
             'fromuser' => $fromuser, 
             'ids' => array()
         );
-        if($canPlay === true){
-            $canPlay=4;
+        
+        if ($canPlay === true) {
+            $canPlay = 4;
         }
         if (! $canPlay) {
             $this->renderPartial('failed');
@@ -52,10 +58,12 @@ class SurveyController extends Controller
     // step one
     public function actionGo ()
     {
+        
         $req = Yii::app()->request;
         $fromuser = $req->getParam('fromuser');
+//        var_dump($this->_setLogin($fromuser));
         $WechatSurveyList = WechatSurveyList::model();
-        $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id);
+        $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id,$fromuser);
         $WechatBoeeSurvey = WechatBoeeSurvey::model();
         if (isset($_POST['survey'])) {
             $survey = $req->getParam('survey');
@@ -71,8 +79,9 @@ class SurveyController extends Controller
                     $pass = false;
                 }
             }
+            
             if ($pass) {
-                $WechatBoeeSurvey->pass(1, $survey, Yii::app()->user->id);
+                $WechatBoeeSurvey->pass(1, $survey, Yii::app()->user->id,$fromuser);
                 $this->renderPartial('success', 
                         array(
                             'title' => '第一关', 
@@ -81,9 +90,10 @@ class SurveyController extends Controller
                             'fromuser' => $fromuser
                         ));
             } else {
-                $WechatBoeeSurvey->failed(1, $survey, Yii::app()->user->id);
+                $WechatBoeeSurvey->failed(1, $survey, Yii::app()->user->id,$fromuser);
                 $this->renderPartial('failed');
             }
+            
         } else {
             $questions = $WechatBoeeSurvey->getRandQuestion(3);
             $this->renderPartial('go', 
@@ -99,7 +109,7 @@ class SurveyController extends Controller
         $req = Yii::app()->request;
         $fromuser = $req->getParam('fromuser');
         $WechatSurveyList = WechatSurveyList::model();
-        $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id);
+        $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id,$fromuser,$fromuser);
         $WechatBoeeSurvey = WechatBoeeSurvey::model();
         if (isset($_POST['survey'])) {
             $survey = $req->getParam('survey');
@@ -116,7 +126,7 @@ class SurveyController extends Controller
                 }
             }
             if ($pass) {
-                $WechatBoeeSurvey->pass(1, $survey, Yii::app()->user->id);
+                $WechatBoeeSurvey->pass(1, $survey, Yii::app()->user->id,$fromuser);
                 $this->renderPartial('success', 
                         array(
                             'title' => '第二关', 
@@ -124,7 +134,7 @@ class SurveyController extends Controller
                             'fromuser' => $fromuser
                         ));
             } else {
-                $WechatBoeeSurvey->failed(2, $survey, Yii::app()->user->id);
+                $WechatBoeeSurvey->failed(2, $survey, Yii::app()->user->id,$fromuser);
                 $this->renderPartial('failed');
             }
         } else {
@@ -144,9 +154,10 @@ class SurveyController extends Controller
     {
         $WechatSurveyList = WechatSurveyList::model();
         $uid = Yii::app()->user->id;
-        $canPlay = $WechatSurveyList->canPlay($uid);
+        
         $req = Yii::app()->request;
         $fromuser = $req->getParam('fromuser');
+        $canPlay = $WechatSurveyList->canPlay($uid,$fromuser);
         $WechatBoeeSurvey = WechatBoeeSurvey::model();
         if (isset($_POST['survey'])) {
             $survey = $req->getParam('survey');
@@ -163,14 +174,14 @@ class SurveyController extends Controller
                 }
             }
             if ($pass) {
-                $WechatBoeeSurvey->pass(3, $survey, Yii::app()->user->id);
+                $WechatBoeeSurvey->pass(3, $survey, Yii::app()->user->id,$fromuser);
                 $this->redirect(
                         $this->createUrl('/boee/survey/getMyApple', 
                                 array(
                                     'step' => 3
                                 )));
             } else {
-                $WechatBoeeSurvey->failed(1, $survey, Yii::app()->user->id);
+                $WechatBoeeSurvey->failed(1, $survey, Yii::app()->user->id,$fromuser);
                 $this->renderPartial('failed');
             }
         } else {
@@ -217,11 +228,15 @@ class SurveyController extends Controller
     public function actionGetMyApple ()
     {
         $req = Yii::app()->request;
-        $step = $req->getParam('step');
         $uid = Yii::app()->user->id;
+        if(!$uid){
+            $this -> redirect($this -> createUrl('/wechat/bind/main'));
+        }
+        $step = $req->getParam('step');
         $WechatSurveyList = WechatSurveyList::model();
         $model = WechatAppleList::model();
         $row = $model->isRecord($uid);
+        
         if (! $row) {
             $row = $WechatSurveyList->findByAttributes(
                     array(

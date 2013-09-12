@@ -47,7 +47,7 @@ class WechatSurveyList extends CActiveRecord
                 'userid, level', 
                 'numerical', 
                 'integerOnly' => true
-            ), 
+            ),
             array(
                 'answer', 
                 'length', 
@@ -92,6 +92,7 @@ class WechatSurveyList extends CActiveRecord
         return array(
             'id' => 'ID', 
             'userid' => '用户ID', 
+            'wechatid'=>'微信ID',
             'answer' => '答案', 
             'disable' => '是否通过', 
             'dateline' => '答题时间', 
@@ -112,6 +113,7 @@ class WechatSurveyList extends CActiveRecord
         $criteria = new CDbCriteria();
         $criteria->compare('id', $this->id);
         $criteria->compare('userid', $this->userid);
+        $criteria->compare('wechatid', $this->wechatid);
         $criteria->compare('answer', $this->answer, true);
         $criteria->compare('disable', $this->disable, true);
         $criteria->compare('dateline', $this->dateline, true);
@@ -128,31 +130,44 @@ class WechatSurveyList extends CActiveRecord
      * @param $uid integer           
      * @return boolean number
      */
-    public function canPlay ($uid)
+    public function canPlay ($uid,$fromuser=false)
     {
-        $WechatAppleList = WechatAppleList::model();
-        $row = $WechatAppleList->findByAttributes(array(
-            'userid' => $uid
-        ));
-        if ($row) {
-            Yii::app()->controller -> redirect(Yii::app()->createUrl('/boee/survey/getMyApple'));
-            Yii::app()->end();
+        
+        $row = false;
+        if(!$uid && $fromuser){
+            $criteria = new CDbCriteria();
+            $criteria -> condition ="wechatid='$fromuser'";
+            $models = $this->findAll($criteria);
+        }else{
+            $WechatAppleList = WechatAppleList::model();
+            $row = $WechatAppleList->findByAttributes(array(
+                    'userid' => $uid
+            ));
+            
+            if ($row) {
+                Yii::app()->controller -> redirect(Yii::app()->createUrl('/boee/survey/getMyApple'));
+                Yii::app()->end();
+            }
+            
+            $criteria = new CDbCriteria();
+            $criteria->condition = "userid = '{$uid}'";
+            $criteria->order = "level asc";
+            $models = $this->findAll($criteria);
         }
-        $criteria = new CDbCriteria();
-        $criteria->condition = "userid = '{$uid}'";
-        $criteria->order = "level asc";
-        $models = $this->findAll($criteria);
+        
         if (empty($models)) {
             return true;
         }
+        
         $level = 1;
-        ;
         foreach ($models as $model) {
             if ($model->disable == '1') {
                 return false;
             }
             $level = $model->level;
         }
+        
         return $level;
+        
     }
 }
