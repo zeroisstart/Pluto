@@ -159,21 +159,21 @@ class MainController extends Controller
                 $data = array(
                         array(
                                 'title' => '入会服务',
-                                'note' => '您的满意，是我们一直的追求！',
+                                //'note' => '您的满意，是我们一直的追求！',
                                 'cover' => 'http://pluto.zeroisstart.com/images/please_wait.png',
                                 'link' => $this -> createAbsoluteUrl('/wechat/static/hyzc',array('fromuser'=>$openid))
                         ),
                         array(
                                 'title' => 'A 入会章程',
-                                'note' => 'A 入会章程',
-                                'cover' => 'http://pluto.zeroisstart.com/images/join.jpg',
+                                //'note' => 'A 入会章程',
+                                'cover' => 'http://pluto.zeroisstart.com/images/wechat/join.jpg',
                                 'link' => $this -> createAbsoluteUrl('/wechat/static/hyzc',array('fromuser'=>$openid))
                         ),
                         array(
                                 'title' => 'B 会员申请',
-                                'note' => 'B 会员申请',
+                                //'note' => 'B 会员申请',
                                 'cover' => 'http://pluto.zeroisstart.com/images/wechat/membership.png',
-                                'link' =>  $this->createUrl('/boee/member/apply',array('fromuser'=>$openid)),
+                                'link' =>  $this->createAbsoluteUrl('/boee/member/apply',array('fromuser'=>$openid)),
                         ),
                 );
                break;
