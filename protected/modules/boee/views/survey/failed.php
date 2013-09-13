@@ -15,7 +15,10 @@
  <br />
  
 <p>
-    <a href="http://www.boeegroup.com/">
+    <a href="
+    <?php 
+    echo $this->createAbsoluteUrl('boee/content/main');
+    ?>">
         <input class="anniu" type="button" value="闯关结束" />&nbsp;
     </a>
 </p>

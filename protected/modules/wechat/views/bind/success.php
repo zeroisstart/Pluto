@@ -22,11 +22,13 @@
             </p>
 			
 			<p style="margin-top: 20px;">
-			    <a href="<?php echo $this -> createAbsoluteUrl('/wechat/static/hyzc')?>">
+			    <a href="<?php echo $this->createAbsoluteUrl('boee/content/main',array('fromuser'=>$model->wechatid));
+			    ?>">
 				    <input class="anniu" type="button" value="返回" />
 				</a>
 				
-				<a href="<?php echo $this -> createAbsoluteUrl('/boee/survey/main',array('fromuser'=>$model->wechatid));?>">
+				<a href="<?php echo $this -> createAbsoluteUrl('/boee/survey/main',array('fromuser'=>$model->wechatid));
+				?>">
 				    <input class="anniu" type="button" value="我要参加" />
 				</a>
 			</p>
