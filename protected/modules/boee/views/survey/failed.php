@@ -15,10 +15,7 @@
  <br />
  
 <p>
-    <a href="
-    <?php 
-    echo $this->createAbsoluteUrl('/boee/content/main');
-    ?>">
+    <a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$fromuser));?>">
         <input class="anniu" type="button" value="闯关结束" />&nbsp;
     </a>
 </p>

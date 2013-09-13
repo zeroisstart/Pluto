@@ -39,7 +39,7 @@ class SurveyController extends Controller
             $canPlay = 4;
         }
         if (! $canPlay) {
-            $this->renderPartial('failed');
+            $this->renderPartial('failed',array('fromuser'=>$fromuser));
         } elseif ($canPlay == '1') {
             $ary_survey_info['step'] = 1;
             $this->renderPartial('binggo', $ary_survey_info);
@@ -61,7 +61,7 @@ class SurveyController extends Controller
         
         $req = Yii::app()->request;
         $fromuser = $req->getParam('fromuser');
-//        var_dump($this->_setLogin($fromuser));
+        
         $WechatSurveyList = WechatSurveyList::model();
         $canPlay = $WechatSurveyList->canPlay(Yii::app()->user->id,$fromuser);
         $WechatBoeeSurvey = WechatBoeeSurvey::model();
@@ -91,7 +91,7 @@ class SurveyController extends Controller
                         ));
             } else {
                 $WechatBoeeSurvey->failed(1, $survey, Yii::app()->user->id,$fromuser);
-                $this->renderPartial('failed');
+                $this->renderPartial('failed',array('fromuser'=>$fromuser));
             }
             
         } else {
@@ -135,7 +135,7 @@ class SurveyController extends Controller
                         ));
             } else {
                 $WechatBoeeSurvey->failed(2, $survey, Yii::app()->user->id,$fromuser);
-                $this->renderPartial('failed');
+                $this->renderPartial('failed',array('fromuser'=>$fromuser));
             }
         } else {
             $uid = Yii::app()->user->id;
@@ -182,7 +182,7 @@ class SurveyController extends Controller
                                 )));
             } else {
                 $WechatBoeeSurvey->failed(1, $survey, Yii::app()->user->id,$fromuser);
-                $this->renderPartial('failed');
+                $this->renderPartial('failed',array('fromuser'=>$fromuser));
             }
         } else {
             $WechatBoeeSurvey = WechatBoeeSurvey::model();
