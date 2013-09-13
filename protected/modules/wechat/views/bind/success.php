@@ -22,7 +22,7 @@
             </p>
 			
 			<p style="margin-top: 20px;">
-			    <a href="<?php echo $this->createAbsoluteUrl('boee/content/main',array('fromuser'=>$model->wechatid));
+			    <a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$model->wechatid));
 			    ?>">
 				    <input class="anniu" type="button" value="返回" />
 				</a>
