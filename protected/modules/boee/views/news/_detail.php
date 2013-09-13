@@ -1,4 +1,7 @@
-<div class="head"><input class="fanhui" name="" type="button" value="返回" />
+<div class="head">
+<a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$formuser))?>">
+    <input class="fanhui" name="" type="button" value="返回" />
+</a>
 <span>详情</span></div>
 <div class="main">
   <h3>走进舟山楼市“保亿，冉冉升起的新星”

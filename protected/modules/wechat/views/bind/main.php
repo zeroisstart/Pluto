@@ -38,13 +38,16 @@
 						checked="checked" />身份证号码<br /> 
 					<?php endif;?>
 					
-					<input type="hidden" name="fromuser"
-						value="<?php echo $model -> wechatid;?>" /> <input type="text"
-						name="bind[cde]" class="inpt_img" maxlength="20" />
+					<input type="hidden" name="fromuser" value="<?php echo $model -> wechatid;?>" />
+					 
+					<input type="text" name="bind[cde]" class="inpt_img" maxlength="20" />
 				</p>
 
 				<p style="margin-top: 20px;">
 					<input class="anniu" type="submit" value="提交" />
+					<a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$model -> wechatid))?>">
+					    <input class="anniu" type="button" value="返回" />
+					</a>
 				</p>
 
 				<p style="margin-top: 20px;">

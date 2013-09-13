@@ -13,10 +13,12 @@ class NewsController extends Controller
             1 => '_rule', 
             2 => '_detail'
         );
+        $formuser = $req->getParam('fromuser');
         $template = $ary_rule[$id]; // '_rule';
         $this->renderPartial('view', 
                 array(
-                    'template' => $template
+                    'template' => $template, 
+                    'fromuser' => $formuser
                 ));
     }
 }
