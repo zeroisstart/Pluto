@@ -8,6 +8,6 @@
 </head>
 
 <body>
-   <?php $this -> renderPartial($template)?>
+   <?php $this -> renderPartial($template,array('fromuser'=>$fromuser))?>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <div class="head">
-<a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$formuser))?>">
+
+<a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$fromuser))?>">
     <input class="fanhui" name="" type="button" value="返回" />
 </a>
 <span>详情</span></div>

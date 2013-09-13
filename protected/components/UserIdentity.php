@@ -46,6 +46,8 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function wechatAuthenticate()
 	{
+	    if(empty($this->username))
+	        return self::ERROR_USERNAME_INVALID;
 	    $user=WechatAccount::model()->find('LOWER(wechatid)=?',array(strtolower($this->username)));
 	    if($user===null)
 	        $this->errorCode=self::ERROR_USERNAME_INVALID;

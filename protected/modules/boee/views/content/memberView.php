@@ -8,20 +8,22 @@
 </head>
 
 <body>
+<!-- 
 <div class="head"><input class="fanhui" name="" type="button" value="返回" />
 <span>详情</span></div>
+ -->
 <div class="main">
   <h3>走进舟山楼市“保亿，冉冉升起的新星”
   <p>2013年10月10日</p>
   </h3>
   <div class="hdzp">
-  <p><img src="../../images/hd.jpg" /></p>
+  <p><img src="../../../../images/hd.jpg" /></p>
   <p>社区一家亲</p>
-  <p><img src="../../images/hd.jpg" /></p>
+  <p><img src="../../../../images/hd.jpg" /></p>
   <p>社区一家亲</p>
-  <p><img src="../../images/hd.jpg" /></p>
+  <p><img src="../../../..//images/hd.jpg" /></p>
   <p>社区一家亲</p>
-  <p><img src="../../images/hd.jpg" /></p>
+  <p><img src="../../../../images/hd.jpg" /></p>
   <p>社区一家亲</p>
   </div>
 </div>

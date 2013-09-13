@@ -11,6 +11,9 @@
 
 <body>
 	<div class="head">
+	<a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$fromuser));?>">
+    <input class="fanhui" name="" type="button" value="返回" />
+</a>
 第二关
 </div>
 	<div class="main">
@@ -34,7 +37,7 @@
 				<?php endforeach;?>
 
 				<p style="margin-top: 20px; text-align: center">
-					<input class="anniu" type="button" value="提交" />
+					<input class="anniu" type="submit" value="提交" />
 				</p>
 				
 			</form>

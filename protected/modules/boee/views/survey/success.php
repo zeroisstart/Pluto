@@ -8,7 +8,12 @@
 </head>
 
 <body>
-<div class="head"><input class="fanhui" name="" type="button" value="返回" />
+
+<div class="head">
+<a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$fromuser));?>">
+    <input class="fanhui" name="" type="button" value="返回" />
+</a>
+
 <?php echo $title;?>
 </div>
 <div class="main">
@@ -20,7 +25,7 @@
 </p> 
  <br />
 <p>
-	<a href="<?php echo $this -> createUrl('/boee/survey/go'.$step,array('ids'=>implode(',', $ids)));?>">
+	<a href="<?php echo $this -> createUrl('/boee/survey/go'.$step,array('fromuser'=>$fromuser,'ids'=>implode(',', $ids)));?>">
 	<input class="anniu" type="button" value="继续闯关" />&nbsp;
 </a>
 	<a href="<?php echo $this -> createUrl('/boee/survey/getMyApple',array('fromuser'=>$fromuser,'step'=>$step));?>">

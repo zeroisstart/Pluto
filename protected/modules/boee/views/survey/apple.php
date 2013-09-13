@@ -17,12 +17,10 @@
 <div class="main">
   <div class="f_16" style="text-align:center"><b >恭喜您，闯关成功！</b></div>
  <br />
- <p>我们会尽快的与您取得联系！请不要着急！<br />
-
-</p> 
+ <p>恭喜您获得第<?php echo $steps[$model -> level];?>关的大礼包！<br /></>谢谢您的参与,我们会尽快的与您取得联系！<br />请不要着急！<br /></p> 
  <br />
 <p>
-	<a href="http://www.boeegroup.com/">
+	<a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$fromuser));?>">
 	    <input class="anniu" type="button" value="返回" />&nbsp;
     </a>
 </p>

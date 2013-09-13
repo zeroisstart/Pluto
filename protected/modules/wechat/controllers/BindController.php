@@ -11,6 +11,7 @@ class BindController extends Controller
         $wechatid = $req->getParam('fromuser');
         $WechatAccount = WechatAccount::model();
         $WechatAccount->wechatid = $wechatid;
+        
         if (isset($_POST['bind'])) {
             // authentic logic
             $bind = $req->getParam('bind');
@@ -47,22 +48,8 @@ class BindController extends Controller
                         }
                     } else {
                         $WechatAccount ->login();
-                        
-                        $WechatSurveyList = new WechatSurveyList();
-                        $criteria = new CDbCriteria();
-                        $criteria -> condition ="wechatid='$wechatid'";
-                        $models = $WechatSurveyList->findAll($criteria);
-                        $level = false;
-                        foreach ($models as $model) {
-                            $model -> id = Yii::app() -> user -> id;
-                            $model -> update();
-                            $level = $model->level;
-                        }
-                        if($level){
-                            $this -> redirect($this -> createUrl('/boee/survey/getMyApple',array('fromuser'=>$wechatid,'step'=>$level)));
-                        }
+                       
                         //$wechatid
-                        
                         $this->renderPartial('success', 
                                 array(
                                     'model' => $WechatAccount
@@ -78,6 +65,20 @@ class BindController extends Controller
                                 ));
                     } else {
                         $WechatAccount ->login();
+                        $WechatSurveyList = new WechatSurveyList();
+                        $criteria = new CDbCriteria();
+                        $criteria -> condition ="wechatid='$wechatid'";
+                        $models = $WechatSurveyList->findAll($criteria);
+                        $level = false;
+                        foreach ($models as $model) {
+                            $model -> userid = Yii::app() -> user -> id;
+                            $model -> update();
+                            $level = $model->level;
+                        }
+                        if($level){
+                            $this -> redirect($this -> createUrl('/boee/survey/getMyApple',array('fromuser'=>$wechatid,'step'=>$level)));
+                        }
+                        
                         $this->renderPartial('success', 
                                 array(
                                     'model' => $WechatAccount

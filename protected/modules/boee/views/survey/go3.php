@@ -11,13 +11,14 @@
 
 <body>
 	<div class="head">
+	<a href="<?php echo $this->createAbsoluteUrl('/boee/content/main',array('fromuser'=>$fromuser));?>">
+    <input class="fanhui" name="" type="button" value="返回" />
+</a>
 		 第三关
 	</div>
 	<div class="main">
 		<div>
-			<form
-				action="<?php echo $this -> createUrl('/boee/survey/go',array('fromuser'=>$fromuser));?>"
-				method="post">
+			<form action="<?php echo $this -> createUrl('/boee/survey/go3',array('fromuser'=>$fromuser));?>" method="post">
 				
 				<?php foreach($questions as $key=> $model):?>
 				<p>
