@@ -8,6 +8,24 @@
 <link href="<?php echo Yii::app() -> baseUrl?>/css/boee/wechat.css"
 	rel="stylesheet" type="text/css">
 
+<style>
+body {
+	width: 100px;
+	text-align: center;
+	margin: auto;
+}
+
+ul li {
+	margin-top: 20px;
+}
+
+ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+</style>
+
 </head>
 
 <?php
@@ -50,7 +68,7 @@ $ary_url = array(
 );
 ?>
 
-<body>
+<body style="text-align: center;">
 	<div>
 		<ul>
 		    <?php foreach ($ary_url as $title => $url):?>
