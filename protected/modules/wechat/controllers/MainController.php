@@ -142,10 +142,9 @@ class MainController extends Controller
     public function outOutNews(){
         $post = $GLOBALS["HTTP_RAW_POST_DATA"];
         $xml = simplexml_load_string($post, 'SimpleXMLElement', LIBXML_NOCDATA);
-        $content = trim($xml->Content); // 获取消息内容 $type =
+        $content = trim($xml->EventKey); // 获取消息内容 $type =
         strtolower($xml->MsgType);
         $openid = $xml->FromUserName;
-        
         $content = strtolower($content);
         
         // log logic start
