@@ -10,9 +10,10 @@ class NewsController extends Controller
         $req = Yii::app()->request;
         $id = $req->getParam('id');
         $ary_rule = array(
-            1 => '_rule'
+            1 => '_rule', 
+            2 => '_detail'
         );
-        $template = '_rule';
+        $template = $ary_rule[$id]; // '_rule';
         $this->renderPartial('view', 
                 array(
                     'template' => $template
