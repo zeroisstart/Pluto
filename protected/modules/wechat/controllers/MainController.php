@@ -145,7 +145,15 @@ class MainController extends Controller
         $content = trim($xml->Content); // 获取消息内容 $type =
         strtolower($xml->MsgType);
         $openid = $xml->FromUserName;
+        
         $content = strtolower($content);
+        
+        // log logic start
+        $WechatRequestLog = new WechatRequestLog();
+        $WechatRequestLog->dateline = date('Y-m-d H:i:s', time());
+        $WechatRequestLog->txt = htmlspecialchars($post);
+        $WechatRequestLog->save();
+        // end log logic
         
         switch ($content){
             case 'rhfw':
