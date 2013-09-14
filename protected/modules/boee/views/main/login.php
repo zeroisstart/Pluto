@@ -4,10 +4,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="<?php echo Yii::app() -> baseUrl?>/css/boee/login.css" type="text/css" />
 <title>登录</title>
+<style>
+
+body{
+	text-align: center;
+	margin: auto;
+}
+.form{
+	width:300px;
+	height:200px;
+	margin:auto;
+	text-align:left;	
+}
+
+.form .row label {
+	width:180px;
+	display:block;
+}
+.errorMessage{
+	color:red;
+}
+</style>
 </head>
 <body>
 	<div class="locon">
-		
     		<div class="form">
             <?php $form=$this->beginWidget('CActiveForm', array(
             	'id'=>'login-form',
