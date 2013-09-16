@@ -4,7 +4,7 @@ $cs -> registerScriptFile(Yii::app() -> baseUrl.'/js/tool.trigger/tools.js',CCli
 ?>
 
 <h2>Request Response~</h2>
-
+<p style="text-align:right;"><b>123456</b> : <?php echo md5('123456');?></p>
 <iframe name="response" class="tool_response_frame">
 </iframe>
 <ul class="accordion span10" data-role="accordion">
