@@ -62,6 +62,7 @@ return array(
       'components'=>'application.components', // 设置元件目录
       'views'=>'application.views',           // 设置显示目录
       'widget'=>'application.widgets',
+      'xupload'=>'ext.xupload',
       'widgets'=>'application.widgets'),      // 设置小工具目录
 	'modules'=>$modules,
 	// application components
