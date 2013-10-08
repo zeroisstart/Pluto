@@ -37,6 +37,9 @@
                                   <a href="//pxtoem.com/" target="_blank">
                                       <button class="command-button default w280">像素之间的转换<small>PX ,EM </small></button>
                                   </a>
+                                  <a href="//brandcolors.net/" target="_blank">
+                                      <button class="command-button default w280">各品牌使用的颜色<small>COLORS </small></button>
+                                  </a>
                                   <?php for($i=0;$i<9;$i++):?>
                                       <button class="command-button default w280">Yes, share and connect<small>Use this option for home or work</small></button>
                                   <?php endfor;?>
